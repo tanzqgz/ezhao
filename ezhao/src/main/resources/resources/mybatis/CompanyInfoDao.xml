@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ezhao.lamps.dao.CompanyInfoDao">
+	<resultMap id="companyInfo" type="com.ezhao.lamps.entity.CompanyInfo">
+		<result property="id" column="ID"/>
+		<result property="companyName" column="COMPANYNAME"/>
+		<result property="introduce" column="INTRODUCE"/>
+		<result property="address" column="ADDRESS"/>
+		<result property="telephone" column="TELEPHONE"/>
+		<result property="cellphone" column="CELLPHONE"/>
+		<result property="faxphone" column="FAXPHONE"/>
+		<result property="email" column="EMAIL"/>
+		<result property="keywords" column="KEYWORDS"/>
+		<result property="certificate" column="CERTIFICATE"/>
+	</resultMap>
+	
+	<!-- 用于select查询公用抽取的列 -->
+	<sql id="columns">
+	    <![CDATA[
+		ID,COMPANYNAME,INTRODUCE,ADDRESS,TELEPHONE,CELLPHONE,FAXPHONE,EMAIL,KEYWORDS,CERTIFICATE
+	    ]]>
+	</sql>
+	
+	<select id="findAll" resultMap="companyInfo">
+		SELECT * FROM ez_companyinfo t 
+	</select>
+	
+	<insert id="save">
+		INSERT INTO ez_companyinfo(
+		COMPANYNAME,
+		INTRODUCE,
+		ADDRESS,
+		TELEPHONE,
+		CELLPHONE,
+		FAXPHONE,
+		EMAIL,
+		KEYWORDS,
+		CERTIFICATE)  VALUES(
+		#{companyName},
+		#{introduce},
+		#{address},
+		#{telephone},
+		#{cellphone},
+		#{faxphone},
+		#{email},
+		#{keywords},
+		#{certificate})
+	</insert>
+	<update id="update" parameterType="companyInfo">
+		UPDATE ez_companyinfo SET 
+		COMPANYNAME = #{companyName},
+		INTRODUCE = #{introduce},
+		ADDRESS = #{address},
+		TELEPHONE = #{telephone},
+		CELLPHONE = #{cellphone},
+		FAXPHONE = #{faxphone},
+		EMAIL = #{email},
+		KEYWORDS = #{keywords},
+		CERTIFICATE = #{certificate}
+		WHERE ID = #{id}
+	</update>
+	
+</mapper>  

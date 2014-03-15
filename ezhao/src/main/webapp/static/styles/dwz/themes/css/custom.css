@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+/* Pages pad */
+.dialog .pagePadContent { border-style:solid; border-width:0 1px; background-color:#fff;border-color:#b8d0d6;}
+.pagePadContent { display:block; overflow:auto; padding:10px 0px 10px 10px; position:relative;}
+.pagePadContent div.unit {display:block; margin:0; padding:5px 0; position:relative;clear:both;}
+.pagePadContent p { float:left; display:block; width:100px; height:21px; margin:0; padding:5px 0; position:relative;}
+.pagePadContent p.nowrap { height:auto;}
+.pagePadContent label { float:left; width:120px; padding:0 5px; line-height:21px;}
+.pagePadContent label.radioButton { float:left; width:auto; padding:0 10px 0 0; line-height:21px;}
+.pagePadContent .textInput { float:left;}
+.pagePadContent select { float:left;}
+.pagePadContent .inputInfo { padding:0 5px; line-height:21px;}
+.pagePadContent span.unit, .pagePadContent a.unit { padding:0 5px; line-height:21px;}
+.pagePadContent span.info{color:#7F7F7F;display:block;line-height:21px;float:left;}
+

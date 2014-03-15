@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/commons/decorators">
+	<excludes>
+		<pattern>/static/*</pattern>
+		<pattern>/login/*</pattern>
+		<pattern>/admin/*</pattern>
+		<pattern>*.json</pattern>
+	</excludes>
+	
+	<decorator name="main" page="main.ftl">
+		<pattern>/*</pattern>
+	</decorator>
+	
+
+</decorators>

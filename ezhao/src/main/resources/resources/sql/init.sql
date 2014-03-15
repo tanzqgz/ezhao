@@ -30,3 +30,19 @@ CREATE TABLE `ezhao`.`product_category` (
   `category_parent` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--公司介绍表
+CREATE TABLE `ez_companyinfo` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `companyName` varchar(100) NOT NULL,
+  `introduce` varchar(2000) DEFAULT NULL,
+  `address` varchar(200) DEFAULT NULL,
+  `telephone` varchar(50) DEFAULT NULL,
+  `cellphone` varchar(50) DEFAULT NULL,
+  `faxphone` varchar(50) DEFAULT NULL,
+  `email` varchar(50) DEFAULT NULL,
+  `keywords` varchar(1000) DEFAULT NULL,
+  `certificate` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

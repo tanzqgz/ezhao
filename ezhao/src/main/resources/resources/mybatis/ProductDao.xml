@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ezhao.lamps.dao.UserDao">
+	<resultMap id="User" type="com.ezhao.lamps.entity.Product">
+		<result property="id" column="ID"/>
+		<result property="loginName" column="LOGINNAME"/>
+		<result property="password" column="PASSWORD"/>
+	</resultMap>
+	
+	<select id="findByLoginName" parameterType="String" resultType="User">
+		SELECT * FROM user t WHERE t.loginName = #{loginName}
+	</select>
+	
+	<select id="findByLoginnameAndPassword" parameterType="User" resultMap="User">
+		SELECT * FROM user t WHERE t.loginName = #{loginName} and t.password = #{password}
+	</select>
+</mapper>  

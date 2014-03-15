@@ -6,10 +6,12 @@
 	<!-- 给持久层对象配置个别名，能方便调用 -->
 	<typeAliases>
 		<typeAlias type="com.ezhao.lamps.entity.User" alias="User" />
+		<typeAlias type="com.ezhao.lamps.entity.CompanyInfo" alias="companyInfo" />
 		<typeAlias type="java.util.HashMap" alias="HashMap" />
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="/resources/mybatis/UserDao.xml" />
+		<mapper resource="/resources/mybatis/CompanyInfoDao.xml" />
 	</mappers>
 </configuration>

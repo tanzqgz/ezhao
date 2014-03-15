@@ -7,22 +7,9 @@
  */
 function submitForm(theBtn,callbackFunction){
 	var theForm = $(theBtn).closest("form");
-	var contentEdit = theForm.find('#contentEdit').val();
-	var contentFile = theForm.find("#contentFile").val();
-	if((contentEdit == '') && (contentFile == '')){
-		alert('请上传内容文件或在线编辑正文内容！');
-		return false;
-	}
-	if(contentFile != ''){
-		var format = contentFile.substring(contentFile.lastIndexOf(".") + 1);
-		if(format != "doc"){
-			alert("正文内容请上传word2003格式的文件（doc文件）");
-			return false;
-		}
-	}
-	//	if(iframeCallback(theForm, callbackFunction)){
+	if(validateCallback(theForm, callbackFunction)){
 		theForm.submit();
-//	}
+	}
 }
 
 function submitPadForm(element,idValue,nameValue){
@@ -102,21 +89,3 @@ function submitPadForm(element,idValue,nameValue){
 		}
 	})
 })(jQuery);
-
-function categorySubmit(obj){
-	var theForm = $(obj).closest("form");
-	$('[name=catagoryId]').val($('#lookupCategoryId').val());
-	$('[name=catagoryName]').val($('#lookupCategoryName').val());
-	if(validateCallback(theForm, callbackFunction)){
-		theForm.submit();
-	}
-}
-
-function ideaCategorySubmit(obj){
-	var theForm = $(obj).closest("form");
-	$('[name=ideaCatagoryId]').val($('#ideaLookupCategoryId').val());
-	$('[name=ideaCatagoryName]').val($('#ideaLookupCategoryName').val());
-	if(validateCallback(theForm, callbackFunction)){
-		theForm.submit();
-	}
-}

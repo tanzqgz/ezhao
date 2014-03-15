@@ -87,20 +87,12 @@ $(function(){
 					</div>
 				
 					<div class="accordionHeader">
-						<h2><span>Folder</span>公司信息</h2>
+						<h2><span>Folder</span>公司介绍</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="${rc.contextPath}/grade/gradeList" target="navTab" rel="sec_grade_page">公司基本资料</a></li>
+							<li><a href="${rc.contextPath}/admin/nav/companyinfo/home" target="navTab" rel="sec_companyinfo_page">公司基本资料</a></li>
 							<li><a href="${rc.contextPath}/grade/gradeList" target="navTab" rel="sec_grade_page">友情链接</a></li>
-						 </ul>
-					</div>
-					<div class="accordionHeader">
-						<h2><span>Folder</span>留言管理</h2>
-					</div>
-					<div class="accordionContent">
-						<ul class="tree">
-							<li><a href="${rc.contextPath}/emailmodel/list" target="navTab" rel="emailmodel_page">查看留言</a></li>
 						 </ul>
 					</div>
 				</div>

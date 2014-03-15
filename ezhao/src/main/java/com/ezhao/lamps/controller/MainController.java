@@ -22,6 +22,6 @@ public class MainController {
 	@RequestMapping(value = "/product")
 	public String productCenter(ModelMap map) throws Exception {
 		System.out.println("==================product");
-		return "/productCenter";
+		return "/intel/cn/productCenter";
 	}
 }

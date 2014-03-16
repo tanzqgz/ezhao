@@ -46,3 +46,11 @@ CREATE TABLE `ez_companyinfo` (
   `contactPerson` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--证书表,保存证书图片的链接
+CREATE TABLE `ez_certificate` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(100) DEFAULT NULL,
+  `url` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;

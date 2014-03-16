@@ -43,6 +43,6 @@ CREATE TABLE `ez_companyinfo` (
   `faxphone` varchar(50) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
   `keywords` varchar(1000) DEFAULT NULL,
-  `certificate` varchar(1000) DEFAULT NULL,
+  `contactPerson` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

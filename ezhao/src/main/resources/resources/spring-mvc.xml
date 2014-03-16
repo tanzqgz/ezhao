@@ -21,7 +21,7 @@
 	<!-- 定义首页 -->
 	<mvc:view-controller path="/" view-name="redirect:/home" />
 
-
+	
 	<!-- freemarker的配置 -->
 	<bean id="freemarkerConfigurer"
 		class="org.springframework.web.servlet.view.freemarker.FreeMarkerConfigurer">
@@ -79,6 +79,10 @@
 		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
 		<property name="defaultLocale" value="zh_CN"></property>
 	</bean>
+	
+	<bean id="multipartResolver"  class="org.springframework.web.multipart.commons.CommonsMultipartResolver">     	
+    	<property name="defaultEncoding" value="UTF-8" />
+	</bean> 
 	 
 	<mvc:interceptors>
 		<mvc:interceptor>

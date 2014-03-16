@@ -12,7 +12,6 @@ public class FileForm {
 	}
 
 	public void setFile(MultipartFile file) {
-		System.out.println("coming setter setFile");
 		this.file = file;
 	}
 
@@ -21,7 +20,6 @@ public class FileForm {
 	}
 
 	public void setDescription(String description) {
-		System.out.println("coming setter description");
 		this.description = description;
 	}
 }

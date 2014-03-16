@@ -9,10 +9,11 @@ import java.util.Date;
 
 public class UploadUtils {
 	private static final String TARGETFOLDER = PropFileUtils.getInstance().getPropertiesValue("upload.file.path");
+	private static final String RELATIVEPATH = PropFileUtils.getInstance().getPropertiesValue("upload.file.relative.path");
 	
 	public static String saveFile(InputStream input,String orginName){
 		String format = orginName.substring(orginName.lastIndexOf("."),orginName.length());
-		return saveFileFromInputStream(input, TARGETFOLDER, getFileName() + format);
+		return RELATIVEPATH + saveFileFromInputStream(input, TARGETFOLDER, getFileName() + format);
 	}
 	
 	public static String saveFileFromInputStream(InputStream ins, String targetFolder, String targetFileName) {
@@ -40,7 +41,7 @@ public class UploadUtils {
 			} catch (IOException e) {
 			}
 		}
-		return targetFullPath;
+		return targetFileName;
 	}
 	
 	public static String getFileName(){

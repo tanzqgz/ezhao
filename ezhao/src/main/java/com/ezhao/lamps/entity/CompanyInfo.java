@@ -10,7 +10,7 @@ public class CompanyInfo {
 	private String faxphone;
 	private String email;
 	private String keywords;
-	private String certificate;
+	private String contactPerson;
 	public int getId() {
 		return id;
 	}
@@ -65,12 +65,10 @@ public class CompanyInfo {
 	public void setKeywords(String keywords) {
 		this.keywords = keywords;
 	}
-	public String getCertificate() {
-		return certificate;
+	public void setContactPerson(String contactPerson) {
+		this.contactPerson = contactPerson;
 	}
-	public void setCertificate(String certificate) {
-		this.certificate = certificate;
+	public String getContactPerson() {
+		return contactPerson;
 	}
-	
-	
 }

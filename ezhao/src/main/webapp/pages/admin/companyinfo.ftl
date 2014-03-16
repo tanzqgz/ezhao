@@ -11,6 +11,10 @@
 				<input name="address" type="text" size="30" value="${(companyInfo.address)!}" class="required"/>
 			</p>
 			<p>
+				<label>联系人：</label>
+				<input name="contactPerson" type="text" size="30" value="${(companyInfo.contactPerson)!}"/>
+			</p>
+			<p>
 				<label>电话号码：</label>
 				<input name="telephone" type="text" size="30" value="${(companyInfo.telephone)!}" />
 			</p>
@@ -25,7 +29,7 @@
 			<p>
 				<label>本站关键词：</label>
 				<input name="keywords" type="text" size="30" value="${(companyInfo.keywords)!}"/>
-			</p>
+			</p><p></p>
 			<p>
 				<label>公司介绍：</label>
 				<textarea name="introduce" cols="160" rows="15">

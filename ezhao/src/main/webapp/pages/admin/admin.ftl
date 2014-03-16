@@ -93,7 +93,7 @@ $(function(){
 						<ul class="tree">
 							<li><a href="${rc.contextPath}/admin/nav/companyinfo/home" target="navTab" rel="sec_companyinfo_page">公司基本资料</a></li>
 							<li><a href="${rc.contextPath}/admin/nav/certificate" target="navTab" rel="sec_certificate_page">上传证书</a></li>
-							<li><a href="${rc.contextPath}/grade/gradeList" target="navTab" rel="sec_grade_page">友情链接</a></li>
+							<!--<li><a href="${rc.contextPath}/grade/gradeList" target="navTab" rel="sec_grade_page">友情链接</a></li>-->
 						 </ul>
 					</div>
 				</div>

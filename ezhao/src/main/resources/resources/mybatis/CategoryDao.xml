@@ -4,7 +4,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
 
 <mapper namespace="com.ezhao.lamps.dao.CategoryDao">
-	<resultMap id="User" type="com.ezhao.lamps.entity.Category">
+	<resultMap id="category" type="com.ezhao.lamps.entity.Category">
 		<result property="id" column="ID"/>
 		<result property="categoryName" column="CATEGORY_NAME"/>
 		<result property="categoryParent" column="CATEGORY_PARENT"/>
@@ -12,11 +12,5 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	
 	</resultMap>
 	
-	<select id="findByLoginName" parameterType="String" resultType="Category">
-		SELECT * FROM user t WHERE t.loginName = #{loginName}
-	</select>
 	
-	<select id="findByLoginnameAndPassword" parameterType="Category" resultMap="Category">
-		SELECT * FROM user t WHERE t.loginName = #{loginName} and t.password = #{password}
-	</select>
 </mapper>  

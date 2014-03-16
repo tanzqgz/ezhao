@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ezhao.lamps.dao.CertificateDao">
+	<resultMap id="companyInfo" type="com.ezhao.lamps.entity.Certificate">
+		<result property="id" column="ID"/>
+		<result property="description" column="DESCRIPTION"/>
+		<result property="url" column="URL"/>
+	</resultMap>
+	
+	<!-- 用于select查询公用抽取的列 -->
+	<sql id="columns">
+	    <![CDATA[
+		ID,DESCRIPTION,URL
+	    ]]>
+	</sql>
+	
+	<select id="findAll" resultMap="companyInfo">
+		SELECT * FROM ez_certificate t 
+	</select>
+	
+	<insert id="save">
+		INSERT INTO ez_certificate(
+		DESCRIPTION,
+		URL)  VALUES(
+		#{description},
+		#{url})
+	</insert>
+	
+	<delete id="delete">
+		delete from ez_certificate where id = #{id}
+	</delete>
+	
+</mapper>  

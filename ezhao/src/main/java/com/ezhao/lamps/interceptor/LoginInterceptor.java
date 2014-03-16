@@ -25,7 +25,12 @@ public class LoginInterceptor implements HandlerInterceptor {
 		}catch(Exception e){
 			logger.error("get the login name error : ",e);
 		}
-		response.sendRedirect(contextPath + "/login/home");
+		String url = request.getRequestURI();
+		if(url.equals("/ezhao/admin/home")){
+			response.sendRedirect(contextPath + "/login/home");
+		}else{
+			response.getWriter().print("{\"statusCode\":\"301\"}");
+		}
 		return false;
 	}
 

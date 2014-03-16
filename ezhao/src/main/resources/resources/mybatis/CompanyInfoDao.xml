@@ -14,13 +14,13 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		<result property="faxphone" column="FAXPHONE"/>
 		<result property="email" column="EMAIL"/>
 		<result property="keywords" column="KEYWORDS"/>
-		<result property="certificate" column="CERTIFICATE"/>
+		<result property="contactPerson" column="CONTACTPERSON"/>
 	</resultMap>
 	
 	<!-- 用于select查询公用抽取的列 -->
 	<sql id="columns">
 	    <![CDATA[
-		ID,COMPANYNAME,INTRODUCE,ADDRESS,TELEPHONE,CELLPHONE,FAXPHONE,EMAIL,KEYWORDS,CERTIFICATE
+		ID,COMPANYNAME,INTRODUCE,ADDRESS,TELEPHONE,CELLPHONE,FAXPHONE,EMAIL,KEYWORDS,CONTACTPERSON
 	    ]]>
 	</sql>
 	
@@ -38,7 +38,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		FAXPHONE,
 		EMAIL,
 		KEYWORDS,
-		CERTIFICATE)  VALUES(
+		CONTACTPERSON)  VALUES(
 		#{companyName},
 		#{introduce},
 		#{address},
@@ -47,7 +47,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		#{faxphone},
 		#{email},
 		#{keywords},
-		#{certificate})
+		#{contactPerson})
 	</insert>
 	<update id="update" parameterType="companyInfo">
 		UPDATE ez_companyinfo SET 
@@ -59,7 +59,7 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		FAXPHONE = #{faxphone},
 		EMAIL = #{email},
 		KEYWORDS = #{keywords},
-		CERTIFICATE = #{certificate}
+		CONTACTPERSON = #{contactPerson}
 		WHERE ID = #{id}
 	</update>
 	

@@ -82,7 +82,8 @@
 	 
 	<mvc:interceptors>
 		<mvc:interceptor>
-			<mvc:mapping path="/admin/*"/> 
+			<mvc:mapping path="/admin/*"/>
+			<mvc:mapping path="/admin/**/*"/> 
 			<bean class="com.ezhao.lamps.interceptor.LoginInterceptor"></bean> 
 		</mvc:interceptor>
 	</mvc:interceptors>

@@ -7,11 +7,13 @@
 	<typeAliases>
 		<typeAlias type="com.ezhao.lamps.entity.User" alias="User" />
 		<typeAlias type="com.ezhao.lamps.entity.CompanyInfo" alias="companyInfo" />
+		<typeAlias type="com.ezhao.lamps.entity.Certificate" alias="certificate" />
 		<typeAlias type="java.util.HashMap" alias="HashMap" />
 	</typeAliases>
 	
 	<mappers>
 		<mapper resource="/resources/mybatis/UserDao.xml" />
 		<mapper resource="/resources/mybatis/CompanyInfoDao.xml" />
+		<mapper resource="/resources/mybatis/CertificateDao.xml" />
 	</mappers>
 </configuration>

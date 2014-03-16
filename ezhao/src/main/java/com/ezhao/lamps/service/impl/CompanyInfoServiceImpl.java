@@ -22,4 +22,14 @@ public class CompanyInfoServiceImpl implements CompanyInfoService{
 		return obj;
 	}
 
+	@Override
+	public void save(CompanyInfo obj) {
+		companyInfoDao.save(obj);
+	}
+
+	@Override
+	public void update(CompanyInfo obj) {
+		companyInfoDao.update(obj);
+	}
+
 }

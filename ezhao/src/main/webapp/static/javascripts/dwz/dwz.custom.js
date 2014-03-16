@@ -89,3 +89,8 @@ function submitPadForm(element,idValue,nameValue){
 		}
 	})
 })(jQuery);
+
+
+function navTabAjaxDone(json){
+	return true;
+}

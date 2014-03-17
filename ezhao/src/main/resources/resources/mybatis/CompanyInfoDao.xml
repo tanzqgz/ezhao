@@ -15,12 +15,22 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		<result property="email" column="EMAIL"/>
 		<result property="keywords" column="KEYWORDS"/>
 		<result property="contactPerson" column="CONTACTPERSON"/>
+		<result property="companyNameEN" column="COMPANYNAMEEN"/>
+		<result property="introduceEN" column="INTRODUCEEN"/>
+		<result property="addressEN" column="ADDRESSEN"/>
+		<result property="telephoneEN" column="TELEPHONEEN"/>
+		<result property="cellphoneEN" column="CELLPHONEEN"/>
+		<result property="faxphoneEN" column="FAXPHONEEN"/>
+		<result property="emailEN" column="EMAILEN"/>
+		<result property="keywordsEN" column="KEYWORDSEN"/>
+		<result property="contactPersonEN" column="CONTACTPERSONEN"/>
 	</resultMap>
 	
 	<!-- 用于select查询公用抽取的列 -->
 	<sql id="columns">
 	    <![CDATA[
 		ID,COMPANYNAME,INTRODUCE,ADDRESS,TELEPHONE,CELLPHONE,FAXPHONE,EMAIL,KEYWORDS,CONTACTPERSON
+		,COMPANYNAMEEN,INTRODUCEEN,ADDRESSEN,TELEPHONEEN,CELLPHONEEN,FAXPHONEEN,EMAILEN,KEYWORDSEN,CONTACTPERSONEN
 	    ]]>
 	</sql>
 	
@@ -38,7 +48,16 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		FAXPHONE,
 		EMAIL,
 		KEYWORDS,
-		CONTACTPERSON)  VALUES(
+		CONTACTPERSON,
+		COMPANYNAMEEN,
+		INTRODUCEEN,
+		ADDRESSEN,
+		TELEPHONEEN,
+		CELLPHONEEN,
+		FAXPHONEEN,
+		EMAILEN,
+		KEYWORDSEN,
+		CONTACTPERSONEN)  VALUES(
 		#{companyName},
 		#{introduce},
 		#{address},
@@ -47,7 +66,16 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		#{faxphone},
 		#{email},
 		#{keywords},
-		#{contactPerson})
+		#{contactPerson},
+		#{companyNameEN},
+		#{introduceEN},
+		#{addressEN},
+		#{telephoneEN},
+		#{cellphoneEN},
+		#{faxphoneEN},
+		#{emailEN},
+		#{keywordsEN},
+		#{contactPersonEN})
 	</insert>
 	<update id="update" parameterType="companyInfo">
 		UPDATE ez_companyinfo SET 
@@ -59,7 +87,16 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		FAXPHONE = #{faxphone},
 		EMAIL = #{email},
 		KEYWORDS = #{keywords},
-		CONTACTPERSON = #{contactPerson}
+		CONTACTPERSON = #{contactPerson},
+		COMPANYNAMEEN = #{companyNameEN},
+		INTRODUCEEN = #{introduceEN},
+		ADDRESSEN = #{addressEN},
+		TELEPHONEEN = #{telephoneEN},
+		CELLPHONEEN = #{cellphoneEN},
+		FAXPHONEEN = #{faxphoneEN},
+		EMAILEN = #{emailEN},
+		KEYWORDSEN = #{keywordsEN},
+		CONTACTPERSONEN = #{contactPersonEN}
 		WHERE ID = #{id}
 	</update>
 	

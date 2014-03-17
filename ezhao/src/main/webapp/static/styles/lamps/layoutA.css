@@ -1,7 +1,7 @@
 
 .icon-all{background:url(../../images/icon-all.png) no-repeat right bottom;display:block}
 /*ie6 icon-all*/
-* html .icon-all{background:url(../../../../images/icon-all.gif) no-repeat right bottom;display:block}
+* html .icon-all{background:url(../../images/icon-all.gif) no-repeat right bottom;display:block}
 body{background:#efefef;color:#7c7c7c}
 body a{color:#7c7c7c}
 body a:hover,body a.hover{color:#0993ea}

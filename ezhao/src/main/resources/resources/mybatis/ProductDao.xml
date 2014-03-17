@@ -11,6 +11,12 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		<result property="productCategory" column="PRODUCT_CATEGORY"/>
 		<result property="thumbnails" column="THUMBNAILS"/>
 		<result property="createDate" column="CREATE_DATE"/>
+		<result property="version" column="VERSION"/>
 	</resultMap>
-	
+	<select id="findProductsForCN" parameterType="page" resultMap="product">
+		SELECT * FROM Product p WHERE p.version=0 and p.id >=(SELECT t.id FROM Product t ORDER BY t.id LIMIT #{offset}, 1) LIMIT #{pageSize}
+	</select>
+	<select id="findProductsForEN" parameterType="page" resultMap="product">
+		SELECT * FROM Product p WHERE p.version=1 and p.id >=(SELECT t.id FROM Product t ORDER BY t.id LIMIT #{offset}, 1) LIMIT #{pageSize}
+	</select>
 </mapper>  

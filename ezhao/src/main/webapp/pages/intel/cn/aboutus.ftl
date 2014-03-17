@@ -62,7 +62,7 @@
             	<div class="main-inner clearfix">
             		<div id="nav-crumbs">
                         <ul class="nav-crumbs-list clearfix">
-                            <li class="index"><a href="http://www.opple.com.cn/" class="icon-all">首页</a></li>
+                            <li class="index"><a href="${rc.contextPath}" class="icon-all"><@spring.message "ezhao.main.page"/></a></li>
                         </ul>
                     </div>
                 	<div id="content">
@@ -70,9 +70,9 @@
                             <div class="main-content">
                                 <div class="pageTitle">公司介绍</div>
                                 <div class="companyText companyBg1 pStyle">
-                                    <p>广州亿照光电隶属发展贡献自己的力量，是亿照光电全体员工的共同愿景，希望与社会各界同仁为创造美好生活，实现美丽中国而携手并进。</p>
+                                    <p>${(obj.introduce)!}</p>
                                 </div>
-                                <div class="backTopBox"><a href="http://www.opple.com.cn/about/company.jsp#top" class="backTop icon-all">back top</a></div>
+                                <div class="backTopBox"><a href="${rc.contextPath}/about/company#top" class="backTop icon-all">back top</a></div>
                             </div>
                         	<div class="side-bar">
                             	<div class="section-inner">
@@ -92,9 +92,9 @@
     									<div class="block-inner">
 											<h2>关于我们</h2>
 												<ul class="side-nav-list">
-													<li class="hover"><a href="">公司介绍</a></li>
-													<li class="hover"><a class="" href="#">联系我们</a></li>
-													<li class="hover"><a class="" href="#">相关证书</a></li>
+													<li class="hover"><a href="${rc.contextPath}/about/company">公司介绍</a></li>
+													<li class="hover"><a class="" href="${rc.contextPath}/about/contact/us">联系我们</a></li>
+													<li class="hover"><a class="" href="${rc.contextPath}/about/certificate">相关证书</a></li>
 												</ul>
 										</div>
 									</div>
@@ -108,11 +108,9 @@
     <div id="footer">
 		<div class="section-inner">
 			<p class="copyright" style="clear:both;text-align:center;color:#888"><@spring.message "ezhao.main.footer"/></p>
-			<p style="clear:both;text-align:center;color:#888">联系电话：020－89000046   传真：020－34352057   邮箱：eozooo@126.com</p>
+			<p style="clear:both;text-align:center;color:#888">联系电话：${(obj.telephone)!}   传真：${(obj.faxphone)!}   邮箱：${(obj.email)!}</p>
 			<p>本站关键词：</p>
-			<p>
-				广州亿照 亿照光电 照明灯 照明设备 户外灯 室内灯 LED灯 LED亿照 亿照LED 绿色照明 节能灯 环保灯 LED照明 LED天花灯 蜡烛灯 遥控灯 球泡灯 射灯 灯管 LED吸顶灯 LED泳池灯 工矿灯 可调光筒灯 灯控制版 豆胆灯 隧道灯 投光灯 洗墙灯 硬灯条 柔性光条 水底灯 草坪灯 庭院灯 遥控球泡灯 广州亿照光电科技有限公司
-			</p>
+			<p>${(obj.keywords)!}</p>
 		</div>
 	</div>
 </div>

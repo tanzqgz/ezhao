@@ -70,11 +70,11 @@
                             <div class="main-content" style="border-left: 1px dotted #d0d0d0;">
                                 <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">联系我们</div>
                                 <div class="companyText companyBg1 pStyle" style="font-size:16px;">
-                                    <p><label style="text-align:right;">&nbsp;&nbsp;联系人</label>：&nbsp;&nbsp;${(obj.contactPerson)!}</p>
-                                    <p><label style="text-align:right;">&nbsp;&nbsp;&nbsp;&nbsp;电话：</label>&nbsp;&nbsp;${(obj.telephone)!}</p>
-                                    <p><label style="text-align:right;">传真电话：</label>&nbsp;&nbsp;${(obj.faxphone)!}</p>
-                                    <p><label style="text-align:right;">&nbsp;&nbsp;e-mail：</label>&nbsp;&nbsp;${(obj.email)!}</p>
-                                    <p><label style="text-align:right;">联系地址：</label>&nbsp;&nbsp;${(obj.address)!}</p>
+                                    <p><strong>&nbsp;&nbsp;联系人</strong>：&nbsp;&nbsp;${(obj.contactPerson)!}</p>
+                                    <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;电话：</strong>&nbsp;&nbsp;${(obj.telephone)!}</p>
+                                    <p><strong>传真电话：</strong>&nbsp;&nbsp;${(obj.faxphone)!}</p>
+                                    <p><strong>&nbsp;&nbsp;e-mail：</strong>&nbsp;&nbsp;${(obj.email)!}</p>
+                                    <p><strong>联系地址：</strong>&nbsp;&nbsp;${(obj.address)!}</p>
                                 </div>
                                 <div class="backTopBox"><a href="${rc.contextPath}/about/company#top" class="backTop icon-all">back top</a></div>
                             </div>

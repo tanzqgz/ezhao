@@ -4,12 +4,21 @@ import java.util.Date;
 
 public class Product {
 
-	public int id;
-	public String productName;
-	public String description;
-	public int product_category;
-	public String thumbnails;
-	public Date create_date;
+	private int id;
+	private String productName;
+	private String description;
+	private int product_category;
+	private String thumbnails;
+	private Date create_date;
+	private int version;
+
+	public int getVersion() {
+		return version;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
 
 	public int getId() {
 		return id;

@@ -4,10 +4,19 @@ import java.util.Date;
 
 public class Category {
 
-	public int id;
-	public String categoryName;
-	public int categoryParent;
-	public Date createDate;
+	private int id;
+	private String categoryName;
+	private int categoryParent;
+	private Date createDate;
+	private int version;
+	
+	public int getVersion() {
+		return version;
+	}
+
+	public void setVersion(int version) {
+		this.version = version;
+	}
 
 	public int getId() {
 		return id;

@@ -42,20 +42,22 @@
 	</div>
 	<div class="head-shadow" style="position: relative;width: 100%;height: 3px;background: #B2B2B2;opacity: 0.35;bottom: 2px;left: 0;z-index: 999999;"></div>
 </div>
+
 <div id="container">
     	<div id="header">
 			<div id="nav">
 				<ul class="clearfix">
 					<li class="index"><a class="" href=""><@spring.message "ezhao.main.page"/></a></li>
-					<li class="product"><a class="" href=""><@spring.message "ezhao.main.about.us"/></a></li>
+					<li class="product"><a class="hover" href=""><@spring.message "ezhao.main.about.us"/></a></li>
 					<li class="experience"><a class="" href=""><@spring.message "ezhao.main.products"/></a></li>
 					<li class="news"><a class="" href=""><@spring.message "ezhao.main.successful.cas"/></a></li>
 					<li class="about"><a class="" href=""><@spring.message "ezhao.main.news.center"/></a></li>
 					<li class="support"><a class="" href=""><@spring.message "ezhao.main.marketing"/></a></li>
-					<li class="support"><a class="hover" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
+					<li class="support"><a class="" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
 				</ul>
 			</div>
 		</div>
+
 
 		<div id="mainer">
             	<div class="main-inner clearfix">
@@ -67,15 +69,13 @@
                 	<div id="content">
                         <div class="content-inner">
                             <div class="main-content" style="border-left: 1px dotted #d0d0d0;">
-                                <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">联系我们</div>
-                                <div class="companyText companyBg1 pStyle" style="font-size:16px;">
-                                    <p><strong>&nbsp;&nbsp;联系人</strong>：&nbsp;&nbsp;${(obj.contactPerson)!}</p>
-                                    <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;电话：</strong>&nbsp;&nbsp;${(obj.telephone)!}</p>
-                                    <p><strong>传真电话：</strong>&nbsp;&nbsp;${(obj.faxphone)!}</p>
-                                    <p><strong>&nbsp;&nbsp;e-mail：</strong>&nbsp;&nbsp;${(obj.email)!}</p>
-                                    <p><strong>联系地址：</strong>&nbsp;&nbsp;${(obj.address)!}</p>
+                                <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">相关证书</div>
+                                <div class="companyText companyBg1 pStyle">
+                                	<#list all as obj>
+                                    <img src="${rc.contextPath}/${(obj.url)!}">
+                                    </#list>
                                 </div>
-                                <div class="backTopBox"><a href="${rc.contextPath}/about/contact/us#top" class="backTop icon-all">back top</a></div>
+                                <div class="backTopBox"><a href="${rc.contextPath}/about/certificate#top" class="backTop icon-all">back top</a></div>
                             </div>
                         	<div class="side-bar">
                             	<div class="section-inner">

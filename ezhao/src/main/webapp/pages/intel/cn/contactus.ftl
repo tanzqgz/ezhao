@@ -40,8 +40,8 @@
 			<a href="" title="English">English</a>		
 		</ul>
 	</div>
+	<div class="head-shadow" style="position: relative;width: 100%;height: 3px;background: #B2B2B2;opacity: 0.35;bottom: 2px;left: 0;z-index: 999999;"></div>
 </div>
-
 <div id="container">
     	<div id="header">
 			<div id="nav">
@@ -50,13 +50,12 @@
 					<li class="product"><a class="" href=""><@spring.message "ezhao.main.about.us"/></a></li>
 					<li class="experience"><a class="" href=""><@spring.message "ezhao.main.products"/></a></li>
 					<li class="news"><a class="" href=""><@spring.message "ezhao.main.successful.cas"/></a></li>
-					<li class="about"><a class="hover" href=""><@spring.message "ezhao.main.news.center"/></a></li>
+					<li class="about"><a class="" href=""><@spring.message "ezhao.main.news.center"/></a></li>
 					<li class="support"><a class="" href=""><@spring.message "ezhao.main.marketing"/></a></li>
-					<li class="support"><a class="" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
+					<li class="support"><a class="hover" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
 				</ul>
 			</div>
 		</div>
-
 
 		<div id="mainer">
             	<div class="main-inner clearfix">

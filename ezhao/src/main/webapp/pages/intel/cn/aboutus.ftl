@@ -40,6 +40,7 @@
 			<a href="" title="English">English</a>		
 		</ul>
 	</div>
+	<div class="head-shadow" style="position: relative;width: 100%;height: 3px;background: #B2B2B2;opacity: 0.35;bottom: 2px;left: 0;z-index: 999999;"></div>
 </div>
 
 <div id="container">

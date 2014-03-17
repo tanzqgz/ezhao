@@ -15,7 +15,6 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/home")
 	public String home(ModelMap map) throws Exception {
-		System.out.println("==================home");
 		return "/intel/cn/index";
 	}
 	
@@ -23,5 +22,11 @@ public class MainController {
 	public String productCenter(ModelMap map) throws Exception {
 		System.out.println("==================product");
 		return "/intel/cn/productCenter";
+	}
+	
+	@RequestMapping(value = "/aboutUs")
+	public String aboutUs(ModelMap map) throws Exception {
+		System.out.println("==================aboutUs");
+		return "/intel/cn/aboutus";
 	}
 }

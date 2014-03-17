@@ -68,10 +68,10 @@
                     </div>
                 	<div id="content">
                         <div class="content-inner">
-                            <div class="main-content">
-                                <div class="pageTitle">公司介绍</div>
+                            <div class="main-content" style="border-left: 1px dotted #d0d0d0;">
+                                <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">公司介绍</div>
                                 <div class="companyText companyBg1 pStyle">
-                                    <p>${(obj.introduce)!}</p>
+                                    <p style="margin-left:10px;">${(obj.introduce)!}</p>
                                 </div>
                                 <div class="backTopBox"><a href="${rc.contextPath}/about/company#top" class="backTop icon-all">back top</a></div>
                             </div>

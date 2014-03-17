@@ -11,6 +11,15 @@ public class CompanyInfo {
 	private String email;
 	private String keywords;
 	private String contactPerson;
+	private String companyNameEN;
+	private String introduceEN;
+	private String addressEN;
+	private String telephoneEN;
+	private String cellphoneEN;
+	private String faxphoneEN;
+	private String emailEN;
+	private String keywordsEN;
+	private String contactPersonEN;
 	public int getId() {
 		return id;
 	}
@@ -70,5 +79,59 @@ public class CompanyInfo {
 	}
 	public String getContactPerson() {
 		return contactPerson;
+	}
+	public String getCompanyNameEN() {
+		return companyNameEN;
+	}
+	public void setCompanyNameEN(String companyNameEN) {
+		this.companyNameEN = companyNameEN;
+	}
+	public String getIntroduceEN() {
+		return introduceEN;
+	}
+	public void setIntroduceEN(String introduceEN) {
+		this.introduceEN = introduceEN;
+	}
+	public String getAddressEN() {
+		return addressEN;
+	}
+	public void setAddressEN(String addressEN) {
+		this.addressEN = addressEN;
+	}
+	public String getTelephoneEN() {
+		return telephoneEN;
+	}
+	public void setTelephoneEN(String telephoneEN) {
+		this.telephoneEN = telephoneEN;
+	}
+	public String getCellphoneEN() {
+		return cellphoneEN;
+	}
+	public void setCellphoneEN(String cellphoneEN) {
+		this.cellphoneEN = cellphoneEN;
+	}
+	public String getFaxphoneEN() {
+		return faxphoneEN;
+	}
+	public void setFaxphoneEN(String faxphoneEN) {
+		this.faxphoneEN = faxphoneEN;
+	}
+	public String getEmailEN() {
+		return emailEN;
+	}
+	public void setEmailEN(String emailEN) {
+		this.emailEN = emailEN;
+	}
+	public String getKeywordsEN() {
+		return keywordsEN;
+	}
+	public void setKeywordsEN(String keywordsEN) {
+		this.keywordsEN = keywordsEN;
+	}
+	public String getContactPersonEN() {
+		return contactPersonEN;
+	}
+	public void setContactPersonEN(String contactPersonEN) {
+		this.contactPersonEN = contactPersonEN;
 	}
 }

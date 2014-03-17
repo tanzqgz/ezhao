@@ -1,11 +1,24 @@
 package com.ezhao.lamps.controller;
 
+import java.util.List;
+
+import javax.annotation.Resource;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.ezhao.lamps.entity.Certificate;
+import com.ezhao.lamps.entity.CompanyInfo;
+import com.ezhao.lamps.service.CertificateService;
+import com.ezhao.lamps.service.CompanyInfoService;
+
 @Controller
 public class MainController {
+	@Resource
+	private CompanyInfoService companyInfoService;
+	@Resource
+	private CertificateService certificateService;
 	/**
 	 * 进入首页
 	 * 
@@ -15,18 +28,51 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/home")
 	public String home(ModelMap map) throws Exception {
-		return "/intel/cn/index";
+		return "/cn/index";
 	}
 	
 	@RequestMapping(value = "/product")
 	public String productCenter(ModelMap map) throws Exception {
 		System.out.println("==================product");
-		return "/intel/cn/productCenter";
+		return "/cn/productCenter";
 	}
 	
+	/**
+	 * 公司介绍
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
 	@RequestMapping(value = "/about/company")
 	public String aboutUs(ModelMap map) throws Exception {
-		System.out.println("==================aboutUs");
-		return "/intel/cn/aboutus";
+		CompanyInfo obj = companyInfoService.findCompanyInfo();
+		map.put("obj", obj);
+		return "/cn/aboutus";
+	}
+	
+	/**
+	 * 联系我们
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/about/contact/us")
+	public String contactUs(ModelMap map) throws Exception {
+		CompanyInfo obj = companyInfoService.findCompanyInfo();
+		map.put("obj", obj);
+		return "/cn/contactus";
+	}
+	
+	/**
+	 * 联系我们
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/about/certificate")
+	public String navCerficate(ModelMap map) throws Exception {
+		List<Certificate> all = certificateService.findAll();
+		map.put("all", all);
+		return "/cn/certificate";
 	}
 }

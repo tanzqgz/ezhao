@@ -44,7 +44,7 @@
 		<div id="nav">
 			<ul class="clearfix">
 				<li class="index"><a class="" href=""><@spring.message "ezhao.main.page"/></a></li>
-				<li class="about"><a class="" href=""><@spring.message "ezhao.main.about.us"/></a></li>
+				<li class="about"><a href="${rc.contextPath}/about/company"><@spring.message "ezhao.main.about.us"/></a></li>
 				<li class="product"><a class="" href=""><@spring.message "ezhao.main.products"/></a></li>
 				<li class="news"><a class="" href=""><@spring.message "ezhao.main.successful.cas"/></a></li>
 				<li class="news"><a class="" href=""><@spring.message "ezhao.main.news.center"/></a></li>

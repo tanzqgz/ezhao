@@ -24,7 +24,7 @@ public class MainController {
 		return "/intel/cn/productCenter";
 	}
 	
-	@RequestMapping(value = "/aboutUs")
+	@RequestMapping(value = "/about/company")
 	public String aboutUs(ModelMap map) throws Exception {
 		System.out.println("==================aboutUs");
 		return "/intel/cn/aboutus";

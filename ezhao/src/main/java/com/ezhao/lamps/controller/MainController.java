@@ -64,7 +64,7 @@ public class MainController {
 	}
 	
 	/**
-	 * 联系我们
+	 * 证书
 	 * @param map
 	 * @return
 	 * @throws Exception
@@ -73,6 +73,34 @@ public class MainController {
 	public String navCerficate(ModelMap map) throws Exception {
 		List<Certificate> all = certificateService.findAll();
 		map.put("all", all);
+		CompanyInfo obj = companyInfoService.findCompanyInfo();
+		map.put("obj", obj);
 		return "/cn/certificate";
+	}
+	
+	/**
+	 * 营销网络
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/marketing")
+	public String navMarketing(ModelMap map) throws Exception {
+		CompanyInfo obj = companyInfoService.findCompanyInfo();
+		map.put("obj", obj);
+		return "/cn/marketing";
+	}
+	
+	/**
+	 * 成功案例
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/successful/case")
+	public String navSuccessfulCase(ModelMap map) throws Exception {
+		CompanyInfo obj = companyInfoService.findCompanyInfo();
+		map.put("obj", obj);
+		return "/cn/successfulcase";
 	}
 }

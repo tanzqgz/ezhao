@@ -54,8 +54,8 @@ $(function(){
 			</div>
 			<div id="sidebar">
 				<div class="toggleCollapse">
-					<h2>管理</h2>
-					<div>管理</div>
+					<h2>菜单导航</h2>
+					<div>菜单导航</div>
 				</div>
 				<div class="accordion" fillSpace="sidebar">
 					<div class="accordionHeader"><!--栏目管理-->
@@ -94,6 +94,16 @@ $(function(){
 							<li><a href="${rc.contextPath}/admin/nav/companyinfo/home" target="navTab" rel="sec_companyinfo_page">公司基本资料</a></li>
 							<li><a href="${rc.contextPath}/admin/nav/certificate" target="navTab" rel="sec_certificate_page">上传证书</a></li>
 							<!--<li><a href="${rc.contextPath}/grade/gradeList" target="navTab" rel="sec_grade_page">友情链接</a></li>-->
+						 </ul>
+					</div>
+					
+					<div class="accordionHeader">
+						<h2><span>Folder</span>成功案例</h2>
+					</div>
+					<div class="accordionContent">
+						<ul class="tree">
+							<li><a href="${rc.contextPath}/admin/category/successful/case" target="navTab" rel="sec_companyinfo_page">案例分类</a></li>
+							<li><a href="${rc.contextPath}/admin/nav/certificate" target="navTab" rel="sec_certificate_page">案例添加</a></li>
 						 </ul>
 					</div>
 				</div>

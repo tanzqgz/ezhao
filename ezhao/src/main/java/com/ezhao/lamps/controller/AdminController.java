@@ -1,7 +1,6 @@
 package com.ezhao.lamps.controller;
 
 
-import java.io.File;
 import java.util.List;
 
 import javax.annotation.Resource;
@@ -121,5 +120,16 @@ public class AdminController {
 		map.addAttribute("callbackType", "closeCurrent");
 		map.addAttribute("retReloadTab", "sec_certificate_page");
 		return "/message/operationMessage";
+	}
+	
+	/**
+	 * 导航到成功案例分类页面
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/category/successful/case")
+	public String navSuccessfulCase(ModelMap map) throws Exception{
+		return "/admin/successfulcasecategory";
 	}
 }

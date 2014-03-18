@@ -6,6 +6,9 @@
 	<!-- 给持久层对象配置个别名，能方便调用 -->
 	<typeAliases>
 		<typeAlias type="com.ezhao.lamps.entity.User" alias="User" />
+		<typeAlias type="com.ezhao.lamps.entity.Product" alias="product" />
+		<typeAlias type="com.ezhao.lamps.entity.Category" alias="category" />
+		<typeAlias type="com.ezhao.lamps.entity.Page" alias="page" />
 		<typeAlias type="com.ezhao.lamps.entity.CompanyInfo" alias="companyInfo" />
 		<typeAlias type="com.ezhao.lamps.entity.Certificate" alias="certificate" />
 		<typeAlias type="java.util.HashMap" alias="HashMap" />
@@ -13,6 +16,8 @@
 	
 	<mappers>
 		<mapper resource="/resources/mybatis/UserDao.xml" />
+		<mapper resource="/resources/mybatis/ProductDao.xml" />
+		<mapper resource="/resources/mybatis/CategoryDao.xml" />
 		<mapper resource="/resources/mybatis/CompanyInfoDao.xml" />
 		<mapper resource="/resources/mybatis/CertificateDao.xml" />
 	</mappers>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ezhao.lamps.dao.SuccessfulCaseCategoryDao">
+	<resultMap id="successfulCase" type="com.ezhao.lamps.entity.SuccessfulCaseCategory">
+		<result property="id" column="ID"/>
+		<result property="categoryName" column="CATEGORYNAME"/>
+		<result property="isLeaf" column="ISLEAF"/>
+		<result property="parentId" column="PARENTID"/>
+	</resultMap>
+	
+	<select id="findAll" resultType="successfulCaseCategory">
+		SELECT * FROM ez_successful_category
+	</select>
+	
+	<select id="findById" parameterType="Integer" resultType="successfulCaseCategory">
+		SELECT * FROM ez_successful_category t where t.id=#{id}
+	</select>
+	
+	<delete id="delete">
+		delete from ez_successful_category where id = #{id}
+	</delete>
+	
+	<insert id="save">
+		INSERT INTO ez_successful_category(
+		CATEGORYNAME,
+		ISLEAF,
+		PARENTID) VALUES(
+		#{categoryName},
+		#{isLeaf},
+		#{parentId})
+	</insert>
+</mapper>  

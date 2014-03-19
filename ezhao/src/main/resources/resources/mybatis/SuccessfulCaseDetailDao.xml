@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ezhao.lamps.dao.SuccessfulCaseDetailDao">
+	<resultMap id="successfulCaseDetail" type="com.ezhao.lamps.entity.SuccessfulCaseDetail">
+		<result property="id" column="ID"/>
+		<result property="description" column="DESCRIPTION"/>
+		<result property="name" column="NAME"/>
+		<result property="descriptionEN" column="DESCRIPTIONEN"/>
+		<result property="nameEN" column="NAMEEN"/>
+		<result property="pictureURL" column="PICTUREURL"/>
+	</resultMap>
+	
+	<select id="findAll" resultType="successfulCaseDetail">
+		SELECT * FROM ez_successfulcasedetail
+	</select>
+	
+	<delete id="delete">
+		delete from ez_successfulcasedetail where id = #{id}
+	</delete>
+	
+	<select id="findById" parameterType="Integer" resultType="successfulCaseDetail">
+		SELECT * FROM ez_successfulcasedetail t where t.id=#{id}
+	</select>
+	
+	<insert id="save">
+		INSERT INTO ez_successfulcasedetail(
+		DESCRIPTION,
+		NAME,
+		DESCRIPTIONEN,
+		NAMEEN,
+		PICTUREURL) VALUES(
+		#{description},
+		#{name},
+		#{descriptionEN},
+		#{nameEN},
+		#{pictureURL})
+	</insert>
+</mapper>  

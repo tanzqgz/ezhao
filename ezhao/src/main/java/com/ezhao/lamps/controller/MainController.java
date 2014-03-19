@@ -6,12 +6,15 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.ezhao.lamps.entity.Certificate;
 import com.ezhao.lamps.entity.CompanyInfo;
+import com.ezhao.lamps.entity.SuccessfulCaseDetail;
 import com.ezhao.lamps.service.CertificateService;
 import com.ezhao.lamps.service.CompanyInfoService;
+import com.ezhao.lamps.service.SuccessfulCaseDetailService;
 
 @Controller
 public class MainController {
@@ -19,6 +22,8 @@ public class MainController {
 	private CompanyInfoService companyInfoService;
 	@Resource
 	private CertificateService certificateService;
+	@Resource
+	private SuccessfulCaseDetailService successfulCaseDetailSerivce;
 	/**
 	 * 进入首页
 	 * 
@@ -28,6 +33,7 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/home")
 	public String home(ModelMap map) throws Exception {
+		System.out.println("===================home");
 		return "/cn/index";
 	}
 	
@@ -45,8 +51,11 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/about/company")
 	public String aboutUs(ModelMap map) throws Exception {
-		CompanyInfo obj = companyInfoService.findCompanyInfo();
-		map.put("obj", obj);
+		try{
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+		}catch(Exception e){
+		}
 		return "/cn/aboutus";
 	}
 	
@@ -58,8 +67,12 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/about/contact/us")
 	public String contactUs(ModelMap map) throws Exception {
-		CompanyInfo obj = companyInfoService.findCompanyInfo();
-		map.put("obj", obj);
+		try{
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+		}catch(Exception e){
+		}
+		
 		return "/cn/contactus";
 	}
 	
@@ -71,10 +84,13 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/about/certificate")
 	public String navCerficate(ModelMap map) throws Exception {
-		List<Certificate> all = certificateService.findAll();
-		map.put("all", all);
-		CompanyInfo obj = companyInfoService.findCompanyInfo();
-		map.put("obj", obj);
+		try{
+			List<Certificate> all = certificateService.findAll();
+			map.put("all", all);
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+		}catch(Exception e){
+		}
 		return "/cn/certificate";
 	}
 	
@@ -86,8 +102,11 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/marketing")
 	public String navMarketing(ModelMap map) throws Exception {
-		CompanyInfo obj = companyInfoService.findCompanyInfo();
-		map.put("obj", obj);
+		try{
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+		}catch(Exception e){
+		}
 		return "/cn/marketing";
 	}
 	
@@ -99,8 +118,35 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/successful/case")
 	public String navSuccessfulCase(ModelMap map) throws Exception {
-		CompanyInfo obj = companyInfoService.findCompanyInfo();
-		map.put("obj", obj);
+		try{
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+			List<SuccessfulCaseDetail> all = successfulCaseDetailSerivce.findAll();
+			map.put("all", all);
+		}catch(Exception e){
+		}
 		return "/cn/successfulcase";
+	}
+	
+	/**
+	 * 成功案例
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/successful/case/{id}")
+	public String singleSuccessfulCase(ModelMap map,@PathVariable(value="id") int id) throws Exception {
+		try{
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+			SuccessfulCaseDetail caseObj = new SuccessfulCaseDetail();
+			caseObj.setId(id);
+			SuccessfulCaseDetail one = successfulCaseDetailSerivce.findById(caseObj);
+			map.put("one", one);
+			List<SuccessfulCaseDetail> all = successfulCaseDetailSerivce.findAll();
+			map.put("all", all);
+		}catch(Exception e){
+		}
+		return "/cn/successfulcaseone";
 	}
 }

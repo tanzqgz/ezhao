@@ -46,13 +46,12 @@
     	<div id="header">
 			<div id="nav">
 				<ul class="clearfix">
-					<li class="index"><a class="" href=""><@spring.message "ezhao.main.page"/></a></li>
-					<li class="product"><a class="" href=""><@spring.message "ezhao.main.about.us"/></a></li>
-					<li class="experience"><a class="" href=""><@spring.message "ezhao.main.products"/></a></li>
-					<li class="news"><a class="" href=""><@spring.message "ezhao.main.successful.cas"/></a></li>
-					<li class="about"><a class="" href=""><@spring.message "ezhao.main.news.center"/></a></li>
-					<li class="support"><a class="" href=""><@spring.message "ezhao.main.marketing"/></a></li>
-					<li class="support"><a class="hover" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
+					<li class="index"><a href="${rc.contextPath}"><@spring.message "ezhao.main.page"/></a></li>
+					<li class="about"><a href="${rc.contextPath}/about/company"><@spring.message "ezhao.main.about.us"/></a></li>
+					<li class="product"><a href="${rc.contextPath}/product"><@spring.message "ezhao.main.products"/></a></li>
+					<li class="news"><a href="${rc.contextPath}/successful/case"><@spring.message "ezhao.main.successful.cas"/></a></li>
+					<li class="support"><a href="${rc.contextPath}/marketing"><@spring.message "ezhao.main.marketing"/></a></li>
+					<li class="support"><a href="${rc.contextPath}/about/contact/us"><@spring.message "ezhao.main.contact.us"/></a></li>
 				</ul>
 			</div>
 		</div>

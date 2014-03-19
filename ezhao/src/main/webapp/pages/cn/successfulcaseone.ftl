@@ -66,13 +66,11 @@
                 	<div id="content">
                         <div class="content-inner">
                             <div class="main-content" style="border-left: 1px dotted #d0d0d0;">
-                                <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">联系我们</div>
-                                <div class="companyText companyBg1 pStyle" style="font-size:16px;">
-                                    <p><strong>&nbsp;&nbsp;联系人</strong>：&nbsp;&nbsp;${(obj.contactPerson)!}</p>
-                                    <p><strong>&nbsp;&nbsp;&nbsp;&nbsp;电话：</strong>&nbsp;&nbsp;${(obj.telephone)!}</p>
-                                    <p><strong>传真电话：</strong>&nbsp;&nbsp;${(obj.faxphone)!}</p>
-                                    <p><strong>&nbsp;&nbsp;e-mail：</strong>&nbsp;&nbsp;${(obj.email)!}</p>
-                                    <p><strong>联系地址：</strong>&nbsp;&nbsp;${(obj.address)!}</p>
+                                <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">${(one.name)!}</div>
+                                <div class="companyText companyBg1 pStyle">
+                                    <img style="width:80%;margin:20px 20px 20px 20px;" src="${rc.contextPath}/${(one.pictureURL)!}">
+                                    <p>案例介绍：</p>
+                                    <p>&nbsp;&nbsp;&nbsp;&nbsp;${(one.description)!}</p>
                                 </div>
                                 <div class="backTopBox"><a href="${rc.contextPath}/about/contact/us#top" class="backTop icon-all">back top</a></div>
                             </div>
@@ -92,11 +90,11 @@
 									</div>
 									<div class="side-nav" style="min-height: 688px;">
     									<div class="block-inner">
-											<h2>关于我们</h2>
+											<h2>成功案例</h2>
 												<ul class="side-nav-list">
-													<li class="hover"><a href="${rc.contextPath}/about/company">公司介绍</a></li>
-													<li class="hover"><a class="" href="${rc.contextPath}/about/contact/us">联系我们</a></li>
-													<li class="hover"><a class="" href="${rc.contextPath}/about/certificate">相关证书</a></li>
+												<#list all as obj>
+													<li class="hover"><a href="${rc.contextPath}/successful/case/${(obj.id)!}">${(obj.name)!}</a></li>
+												</#list>
 												</ul>
 										</div>
 									</div>

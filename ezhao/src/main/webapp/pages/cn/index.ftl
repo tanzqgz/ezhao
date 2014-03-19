@@ -1,5 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" class="no-js"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en" class="no-js">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="keywords" content="灯具,光源,电器,吸顶灯,节能灯,店铺照明,产品">
 <meta name="description" content="<@spring.message "ezhao.name"/>">
@@ -16,40 +18,28 @@
 
 <body id="index" data-controller="index" data-action="init">
 	<div id="wraper">
-	<!--[if IE 6]>
-<script src="/js/DD_belatedPNG.js"></script>
-<script>
-  /* EXAMPLE */
-  DD_belatedPNG.fix('.png_bg');
-  
-  /* string argument can be any CSS selector */
-  /* .png_bg example is unnecessary */
-  /* change it to what suits you! */
-</script>
-<![endif]-->
-<div id="toper" class="png_bg">
-	<div class="section-inner">
-		<div id="logo">
-			<a href="" class="png_bg" title="亿照logo"><img src="${rc.contextPath}/static/images/ezhaoLogo.jpg" style="width:442px;height:55px;"/></a>
+		<div id="toper" class="png_bg">
+			<div class="section-inner">
+				<div id="logo">
+					<a href="" class="png_bg" title="亿照logo"><img src="${rc.contextPath}/static/images/ezhaoLogo.jpg" style="width:442px;height:55px;"/></a>
+				</div>
+				<ul class="quick-menu">
+					<a href="" title="中文">中文</a> <span>|<span> 
+					<a href="" title="English">English</a>		
+				</ul>
+			</div>
 		</div>
-		<ul class="quick-menu">
-			<a href="" title="中文">中文</a> <span>|<span> 
-			<a href="" title="English">English</a>		
-		</ul>
-	</div>
-</div>
 
 <div id="container">
 	<div id="header">
 		<div id="nav">
 			<ul class="clearfix">
-				<li class="index"><a class="" href=""><@spring.message "ezhao.main.page"/></a></li>
+				<li class="index"><a href="${rc.contextPath}"><@spring.message "ezhao.main.page"/></a></li>
 				<li class="about"><a href="${rc.contextPath}/about/company"><@spring.message "ezhao.main.about.us"/></a></li>
-				<li class="product"><a class="" href=""><@spring.message "ezhao.main.products"/></a></li>
-				<li class="news"><a class="" href=""><@spring.message "ezhao.main.successful.cas"/></a></li>
-				<li class="news"><a class="" href=""><@spring.message "ezhao.main.news.center"/></a></li>
-				<li class="support"><a class="" href=""><@spring.message "ezhao.main.marketing"/></a></li>
-				<li class="support"><a class="" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
+				<li class="product"><a href="${rc.contextPath}/product"><@spring.message "ezhao.main.products"/></a></li>
+				<li class="news"><a href="${rc.contextPath}/successful/case"><@spring.message "ezhao.main.successful.cas"/></a></li>
+				<li class="support"><a href="${rc.contextPath}/marketing"><@spring.message "ezhao.main.marketing"/></a></li>
+				<li class="support"><a href="${rc.contextPath}/about/contact/us"><@spring.message "ezhao.main.contact.us"/></a></li>
 			</ul>
 		</div>
 	</div>

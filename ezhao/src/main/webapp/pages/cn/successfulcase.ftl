@@ -46,13 +46,12 @@
     	<div id="header">
 			<div id="nav">
 				<ul class="clearfix">
-					<li class="index"><a class="" href=""><@spring.message "ezhao.main.page"/></a></li>
-					<li class="product"><a class="" href=""><@spring.message "ezhao.main.about.us"/></a></li>
-					<li class="experience"><a class="" href=""><@spring.message "ezhao.main.products"/></a></li>
-					<li class="news"><a class="" href=""><@spring.message "ezhao.main.successful.cas"/></a></li>
-					<li class="about"><a class="" href=""><@spring.message "ezhao.main.news.center"/></a></li>
-					<li class="support"><a class="" href=""><@spring.message "ezhao.main.marketing"/></a></li>
-					<li class="support"><a class="hover" href=""><@spring.message "ezhao.main.contact.us"/></a></li>
+					<li class="index"><a href="${rc.contextPath}"><@spring.message "ezhao.main.page"/></a></li>
+					<li class="about"><a href="${rc.contextPath}/about/company"><@spring.message "ezhao.main.about.us"/></a></li>
+					<li class="product"><a href="${rc.contextPath}/product"><@spring.message "ezhao.main.products"/></a></li>
+					<li class="news"><a href="${rc.contextPath}/successful/case"><@spring.message "ezhao.main.successful.cas"/></a></li>
+					<li class="support"><a href="${rc.contextPath}/marketing"><@spring.message "ezhao.main.marketing"/></a></li>
+					<li class="support"><a href="${rc.contextPath}/about/contact/us"><@spring.message "ezhao.main.contact.us"/></a></li>
 				</ul>
 			</div>
 		</div>
@@ -69,13 +68,15 @@
                             <div class="main-content" style="border-left: 1px dotted #d0d0d0;">
                                 <div class="pageTitle" style="font-size: 16px;color: green;font-weight: bold;text-align: center;border-bottom: 1px solid #D0D0D0;">成功案例</div>
                                 <div class="companyText companyBg1 pStyle" style="font-size:16px;">
-                                    <ul class="search-result-list clearfix">
-                                    	<li style="margin:20px 20px 20px 20px;">
+                                    <ul>
+                                    <#list all as obj>
+                                    	<li style="margin:20px 20px 20px 20px;float:left;">
                                         	<div class="box-inner" >
-                                        		<a href="" class="feature"><img style="width:170px;height:170px;" src="${rc.contextPath}/static/images/yizao.jpg" title="LED 泳池灯系列" alt="LED 泳池灯系列"><span class="tag"></span></a>
-                                            	<p><a href="" class="intro">LED 泳池灯系列</a></p>
+                                        		<a href="${rc.contextPath}/successful/case/${(obj.id)!}" class="feature"><img style="width:170px;height:170px;" src="${rc.contextPath}/${(obj.pictureURL)!}" title="${(obj.name)!}" alt="${(obj.name)!}"><span class="tag"></span></a>
+                                            	<p style="width:150px;"><a href="${rc.contextPath}/successful/case/${(obj.id)!}" class="intro">${(obj.name)!}</a></p>
                                             </div>
                                         </li>
+                                    </#list>
                                     </ul>
                                 </div>
                                 <div class="backTopBox"><a href="${rc.contextPath}/about/contact/us#top" class="backTop icon-all">back top</a></div>
@@ -98,9 +99,9 @@
     									<div class="block-inner">
 											<h2>成功案例</h2>
 												<ul class="side-nav-list">
-													<li class="hover"><a href="${rc.contextPath}/about/company">公司介绍</a></li>
-													<li class="hover"><a class="" href="${rc.contextPath}/about/contact/us">联系我们</a></li>
-													<li class="hover"><a class="" href="${rc.contextPath}/about/certificate">相关证书</a></li>
+												<#list all as obj>
+													<li class="hover"><a href="${rc.contextPath}/successful/case/${(obj.id)!}">${(obj.name)!}</a></li>
+												</#list>
 												</ul>
 										</div>
 									</div>

@@ -63,7 +63,7 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="${rc.contextPath}/admin/catagory/question/manage?pageSize=10" target="navTab" rel="question_catagory_page">产品分类管理</a></li>
+							<li><a href="${rc.contextPath}/admin/product/category" target="navTab" rel="product_category_page">产品分类</a></li>
 							<li><a href="${rc.contextPath}/admin/catagory/idea/manage?pageSize=10" target="navTab" rel="idea_catagory_page">添加产品</a></li>
 						</ul>
 					</div>		
@@ -102,8 +102,9 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="${rc.contextPath}/admin/category/successful/case" target="navTab" rel="sec_companyinfo_page">案例分类</a></li>
-							<li><a href="${rc.contextPath}/admin/nav/certificate" target="navTab" rel="sec_certificate_page">案例添加</a></li>
+							<!--<li><a href="${rc.contextPath}/admin/category/successful/case" target="navTab" rel="sec_successfulcase_page">案例分类</a></li>-->
+							<li><a href="${rc.contextPath}/admin/detail/successful/case" target="navTab" rel="sec_successfulcasedetailsave_page">案例添加</a></li>
+							<li><a href="${rc.contextPath}/admin/detail/successful/case/list" target="navTab" rel="sec_successfulcasealllist_page">所有案例</a></li>
 						 </ul>
 					</div>
 				</div>

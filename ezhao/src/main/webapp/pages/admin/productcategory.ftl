@@ -4,7 +4,7 @@
 	<input type="hidden" name="pageSize" value="" />
 </form>
 <div class="pageHeader">
-<form  action="${rc.contextPath}/admin/category/successful/case/save" method="post" class="pageForm required-validate">
+<form onsubmit="return iframeCallback(this,navTabAjaxDone);"  action="${rc.contextPath}/admin/product/category/save" method="post" class="pageForm required-validate">
 	<div class="searchBar">
 		<table class="pageFormContent">
 			<tr>
@@ -37,7 +37,7 @@
 <div class="pageContent">
 	<div class="panelBar">
 		<ul class="toolBar">
-			<li><a title="删除" target="selectedTodo" rel="id" href="${rc.contextPath}/admin/category/successful/case/delete" class="delete"><span>删除</span></a></li>
+			<li><a title="删除" target="selectedTodo" rel="id" href="${rc.contextPath}/admin/product/category/delete" class="delete"><span>删除</span></a></li>
 			<li class="line">line</li>
 		</ul>
 	</div>

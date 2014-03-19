@@ -1,5 +1,5 @@
 <div class="pageContent">                                                                                 
-	<form method="post" action="${rc.contextPath}/admin/nav/companyinfo/save" class="pageForm required-validate"">
+	<form method="post" action="${rc.contextPath}/admin/nav/companyinfo/save" class="pageForm required-validate">
 		<input type="hidden" name="id" value="${(companyInfo.id)!}">
 		<div class="pageFormContent" layoutH="456">
 			<table style="border-spacing:10px;">

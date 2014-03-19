@@ -2,7 +2,6 @@ package com.ezhao.lamps.entity;
 
 public class SuccessfulCaseCategory {
 	private int id;
-	private String categoryId;
 	private String categoryName;
 	private String isLeaf;
 	private String parentId;
@@ -12,12 +11,6 @@ public class SuccessfulCaseCategory {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	public String getCategoryId() {
-		return categoryId;
-	}
-	public void setCategoryId(String categoryId) {
-		this.categoryId = categoryId;
 	}
 	public String getCategoryName() {
 		return categoryName;

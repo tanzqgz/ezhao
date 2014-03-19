@@ -13,7 +13,6 @@ import com.ezhao.lamps.service.CategoryService;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
-
 	@Resource
 	private CategoryDao categoryDao;
 
@@ -26,6 +25,21 @@ public class CategoryServiceImpl implements CategoryService {
 			categorys = categoryDao.findCategorysForEN();
 		}
 		return categorys;
+	}
+
+	@Override
+	public List<Category> findAll() {
+		return categoryDao.findAll();
+	}
+
+	@Override
+	public void save(Category obj) {
+		categoryDao.save(obj);
+	}
+
+	@Override
+	public void delete(Category obj) {
+		categoryDao.delete(obj);
 	}
 
 }

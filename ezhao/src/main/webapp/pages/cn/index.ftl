@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="keywords" content="灯具,光源,电器,吸顶灯,节能灯,店铺照明,产品">
+<meta name="keywords" content="广州亿照 亿照光电 照明灯 照明设备 户外灯 室内灯 LED灯 LED亿照 亿照LED 绿色照明 节能灯 环保灯 LED照明 LED天花灯 蜡烛灯 遥控灯 球泡灯 射灯 灯管 LED吸顶灯 LED泳池灯 工矿灯 可调光筒灯 灯控制版 豆胆灯 隧道灯 投光灯 洗墙灯 硬灯条 柔性光条 水底灯 草坪灯 庭院灯 遥控球泡灯 广州亿照光电科技有限公司">
 <meta name="description" content="<@spring.message "ezhao.name"/>">
 <title><@spring.message "ezhao.name"/></title>
 <link href="${rc.contextPath}/static/styles/lamps/global.css" rel="stylesheet" type="text/css">
@@ -44,8 +44,8 @@
 		</div>
 	</div>
 	<ul class="index-kv-b-list">
-		<img title="上海欢乐谷" src="${rc.contextPath}/static/images/taizhou.jpg" style="width:610;height:443px;margin-top:46px;margin-left:60px;"/>
-		<img title="泰州景区" src="${rc.contextPath}/static/images/taizhoujingqu.jpg" style="width:610;height:443px;margin-top:46px;margin-left:30px;"/>
+		<img title="上海欢乐谷" src="${rc.contextPath}/static/images/taizhou.jpg" style="width:49%;height:90%;margin-top:46px;margin-left:3px;"/>
+		<img title="泰州景区" src="${rc.contextPath}/static/images/taizhoujingqu.jpg" style="width:50%;height:90%;margin-top:46px;float:left;"/>
 	</ul>
 </div>
 

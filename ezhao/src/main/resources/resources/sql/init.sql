@@ -63,3 +63,34 @@ CREATE TABLE `ez_certificate` (
   `url` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--成功案例分类
+CREATE TABLE `ez_successful_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `CATEGORYNAME` varchar(45) NOT NULL,
+  `PARENTID` int(11) NOT NULL,
+  `ISLEAF` varchar(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--成功案例细节
+CREATE TABLE `ez_successfulcasedetail` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `description` varchar(4000) NOT NULL,
+  `name` varchar(500) NOT NULL,
+  `descriptionEN` varchar(5000) NOT NULL,
+  `nameEN` varchar(500) NOT NULL,
+  `pictureURL` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+--产品分类
+CREATE TABLE `ez_product_category` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `CATEGORYNAME` varchar(45) NOT NULL,
+  `PARENTID` int(11) NOT NULL,
+  `ISLEAF` varchar(1) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+

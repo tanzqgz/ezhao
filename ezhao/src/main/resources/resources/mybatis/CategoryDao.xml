@@ -6,16 +6,31 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.ezhao.lamps.dao.CategoryDao">
 	<resultMap id="category" type="com.ezhao.lamps.entity.Category">
 		<result property="id" column="ID"/>
-		<result property="categoryName" column="CATEGORY_NAME"/>
-		<result property="categoryParent" column="CATEGORY_PARENT"/>
-		<result property="createDate" column="CRETE_DATE"/>
+		<result property="categoryName" column="CATEGORYNAME"/>
+		<result property="parentId" column="PARENTID"/>
+		<result property="isLeaf" column="ISLEAF"/>
 	
 	</resultMap>
-	<select id="findCategorysForCN" resultMap="category">
-		SELECT * FROM category c WHERE c.version=0 
-	</select>
-	<select id="findCategorysForEN" resultMap="category">
-		SELECT * FROM category c WHERE c.version=1
+	
+	<select id="findAll" resultType="category">
+		SELECT * FROM ez_product_category
 	</select>
 	
+	<select id="findById" parameterType="Integer" resultType="category">
+		SELECT * FROM ez_product_category t where t.id=#{id}
+	</select>
+	
+	<delete id="delete">
+		delete from ez_product_category where id = #{id}
+	</delete>
+	
+	<insert id="save">
+		INSERT INTO ez_product_category(
+		CATEGORYNAME,
+		ISLEAF,
+		PARENTID) VALUES(
+		#{categoryName},
+		#{isLeaf},
+		#{parentId})
+	</insert>
 </mapper>  

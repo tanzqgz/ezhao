@@ -66,12 +66,13 @@
 						</div>
                         <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
 							<div class="lib2" style="height:13px; color:#888b9c; ">光，有你未见的一面</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">飞利浦LED照明科技赋予空间以生命。</div>
+							<div class="lib3" style="color:#888b9c; overflow:hidden; "></div>
 						</div>
                         <div style="display:none;">
 						</div>
 						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="http://www.ecat.lighting.philips.com.cn/l/" class="liLink" style="vertical-align:middle;">浏览更多信息</a><img src="http://www.lighting.philips.com.cn/images/lighting/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
+						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
+						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
 						</div>
 					</div>
 				</div>
@@ -84,13 +85,14 @@
 							<img src="${rc.contextPath}/static/images/yizao1.jpg" alt="LED 水下灯系列" width="296" height="296" style="margin:2px 0 0 4px">
 						</div>
                         <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">飞利浦照明解决方案</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">突破传统，创新求变是飞利浦照明的魅力来源。</div>
+							<div class="lib2" style="height:13px; color:#888b9c; ">LED 水下灯系列</div>
+							<div class="lib3" style="color:#888b9c; overflow:hidden; ">突破传统，创新求变</div>
 						</div>
                         <div style="display:none;">
 						</div>
 						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="http://www.lighting.philips.com.cn/cn_zh/projects/" class="liLink" style="vertical-align:middle;">浏览更多信息</a><img src="http://www.lighting.philips.com.cn/images/lighting/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
+						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
+						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
 						</div>
 					</div>
 				</div>
@@ -103,13 +105,14 @@
 							<img src="${rc.contextPath}/static/images/youdeng.jpg" alt="LED 柔灯条系列" width="296" height="296" style="margin:2px 0 0 4px">
 						</div>
                         <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">飞利浦照明设计师成长计划</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">突破自我，尽现才华</div>
+							<div class="lib2" style="height:13px; color:#888b9c; ">LED 柔灯条系列</div>
+							<div class="lib3" style="color:#888b9c; overflow:hidden; "></div>
 						</div>
                         <div style="display:none;">
 						</div>
 						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="http://www.lighting.philips.com.cn/cn_zh/application_areas/segments/elite/" class="liLink" style="vertical-align:middle;">浏览更多信息</a><img src="http://www.lighting.philips.com.cn/images/lighting/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
+						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
+						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
 						</div>
 					</div>
 				</div>
@@ -122,13 +125,14 @@
 							<img src="${rc.contextPath}/static/images/xiding.jpg" alt="LED 吸顶灯系列" width="296" height="296" style="margin:2px 0 0 4px">
 						</div>
                         <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">光，创见无限潜能</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">飞利浦绿色办公照明系统，点亮无尽的灵感。</div>
+							<div class="lib2" style="height:13px; color:#888b9c; ">LED 吸顶灯系列</div>
+							<div class="lib3" style="color:#888b9c; overflow:hidden; ">LED 吸顶灯系列</div>
 						</div>
                         <div style="display:none;">
 						</div>
 						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="http://www.lighting.philips.com.cn/cn_zh/application_areas/segments/office/" class="liLink" style="vertical-align:middle;">浏览更多信息</a><img src="http://www.lighting.philips.com.cn/images/lighting/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
+						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
+						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
 						</div>
 					</div>
 				</div>
@@ -141,13 +145,14 @@
 							<img src="${rc.contextPath}/static/images/tongdeng.jpg" alt="LED 筒灯系列" width="296" height="296" style="margin:2px 0 0 4px">
 						</div>
                         <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">低碳工业，绿动未来</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">绿色、高效、节能、适用的工业照明解决方案。</div>
+							<div class="lib2" style="height:13px; color:#888b9c; ">LED 筒灯系列</div>
+							<div class="lib3" style="color:#888b9c; overflow:hidden; ">LED 筒灯系列</div>
 						</div>
                         <div style="display:none;">
 						</div>
 						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="http://www.lighting.philips.com.cn/cn_zh/application_areas/segments/industry/" class="liLink" style="vertical-align:middle;">浏览更多信息</a><img src="http://www.lighting.philips.com.cn/images/lighting/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
+						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
+						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
 						</div>
 					</div>
 				</div>
@@ -160,22 +165,23 @@
 							<img src="${rc.contextPath}/static/images/ludeng.jpg" alt="LED 路灯系列" width="296" height="296" style="margin:2px 0 0 4px">
 						</div>
                         <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">绿色照明安全舒适</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">飞利浦绿色机场照明方案，开启缤纷城市旅途</div>
+							<div class="lib2" style="height:13px; color:#888b9c; ">LED 路灯系列</div>
+							<div class="lib3" style="color:#888b9c; overflow:hidden; ">LED 路灯系列</div>
 						</div>
                         <div style="display:none;">
 						</div>
 						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="http://www.lighting.philips.com.cn/cn_zh/application_areas/segments/airport/" class="liLink" style="vertical-align:middle;">浏览更多信息</a><img src="http://www.lighting.philips.com.cn/images/lighting/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
+						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
+						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
 						</div>
 					</div>
 				</div>
 				<div style="clear:both"></div>
 				</div>            
     <div style="margin-left: -1px; display: block;
-        padding: 0px 0px 0px 0px; margin-left: -2px; background: url(http://www.lighting.philips.com.cn/images/bg_banner.gif) repeat-x;" id="SeoModuleContainer">
+        padding: 0px 0px 0px 0px; margin-left: -2px; background: url(${rc.contextPath}/static/images/bg_banner.gif) repeat-x;" id="SeoModuleContainer">
         <div align="center">
-            <img src="http://www.lighting.philips.com.cn/images/lighting/Horizontal-drop-shadow-divider.png" style="padding-top: 0px;" alt="" width="100%" height="15">
+            <img src="${rc.contextPath}/static/images/Horizontal-drop-shadow-divider.png" style="padding-top: 0px;" alt="" width="100%" height="15">
         </div>
     <div style="clear: both">
     </div>
@@ -192,15 +198,6 @@
 	</div>
 </div>
 </div>
-<script type="text/javascript">
-$(".index-kv-b-list li").each(function(index, ele){
-		if(index==0){
-			$("#kv_points").append('<li class="current"><a href="#" class="png_bg"></a></li>');
-		}else{
-			$("#kv_points").append('<li><a href="#" class="png_bg"></a></li>');
-		}
-});
-</script>
 
 </body>
 </html>

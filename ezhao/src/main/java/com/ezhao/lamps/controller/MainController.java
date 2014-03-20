@@ -33,13 +33,16 @@ public class MainController {
 	 */
 	@RequestMapping(value = "/home")
 	public String home(ModelMap map) throws Exception {
-		System.out.println("===================home");
 		return "/cn/index";
 	}
 	
 	@RequestMapping(value = "/product")
 	public String productCenter(ModelMap map) throws Exception {
-		System.out.println("==================product");
+		try{
+			CompanyInfo obj = companyInfoService.findCompanyInfo();
+			map.put("obj", obj);
+		}catch(Exception e){
+		}
 		return "/cn/productCenter";
 	}
 	

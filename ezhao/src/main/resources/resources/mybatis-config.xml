@@ -13,6 +13,8 @@
 		<typeAlias type="com.ezhao.lamps.entity.Certificate" alias="certificate" />
 		<typeAlias type="com.ezhao.lamps.entity.SuccessfulCaseCategory" alias="successfulCaseCategory" />
 		<typeAlias type="com.ezhao.lamps.entity.SuccessfulCaseDetail" alias="successfulCaseDetail" />
+		<typeAlias type="com.ezhao.lamps.entity.AdvertiseType" alias="advertiseType" />
+		<typeAlias type="com.ezhao.lamps.entity.Advertise" alias="advertise" />
 		<typeAlias type="java.util.HashMap" alias="HashMap" />
 	</typeAliases>
 	
@@ -24,5 +26,7 @@
 		<mapper resource="/resources/mybatis/CertificateDao.xml" />
 		<mapper resource="/resources/mybatis/SuccessfulCaseCategoryDao.xml" />
 		<mapper resource="/resources/mybatis/SuccessfulCaseDetailDao.xml" />
+		<mapper resource="/resources/mybatis/AdvertiseTypeDao.xml" />
+		<mapper resource="/resources/mybatis/AdvertiseDao.xml" />
 	</mappers>
 </configuration>

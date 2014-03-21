@@ -58,8 +58,16 @@ $(function(){
 					<div>菜单导航</div>
 				</div>
 				<div class="accordion" fillSpace="sidebar">
+					<div class="accordionHeader"><!--广告栏目-->
+						<h2><span>Folder</span>广告栏目</h2>
+						</div>
+						<div class="accordionContent">
+						<ul class="tree">
+							<li><a href="${rc.contextPath}/admin/advertise/manager" target="navTab" rel="advertise_manager_page">广告管理</a></li>
+						</ul>
+					</div>	
 					<div class="accordionHeader"><!--栏目管理-->
-						<h2><span>Folder</span>产品管理</h2>
+					<h2><span>Folder</span>产品管理</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
@@ -68,7 +76,7 @@ $(function(){
 						</ul>
 					</div>		
 					<div class="accordionHeader">
-						<h2><span>Folder</span>新闻发布</h2>
+					<h2><span>Folder</span>新闻发布</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">

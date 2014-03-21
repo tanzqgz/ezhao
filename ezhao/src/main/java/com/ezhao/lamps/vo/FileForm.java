@@ -4,7 +4,16 @@ import org.springframework.web.multipart.MultipartFile;
 
 public class FileForm {
 	private MultipartFile file;
+	private MultipartFile file1;
 	
+	public MultipartFile getFile1() {
+		return file1;
+	}
+
+	public void setFile1(MultipartFile file1) {
+		this.file1 = file1;
+	}
+
 	private String description;
 
 	public MultipartFile getFile() {

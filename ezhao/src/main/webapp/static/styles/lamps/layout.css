@@ -11,12 +11,13 @@ body a:hover,body a.hover{color:#0993ea}
 
 #header{position:relative;z-index:110;}
 /*顶部BANNER*/
-#toper{height:88px;background:url(../../images/bg-top.png) repeat-x 0 0;width:100%;position:relative;z-index: 9999;/*position:fixed;top:0;left:0*/}
+#toper{height:88px;background:url(../../images/bg-top.png) repeat-x 0 0;width:100%;position:relative;z-index: -9999;/*position:fixed;top:0;left:0*/}
 /** html .toper-fb{position:absolute;bottom:auto;top:expression(eval(document.documentElement.scrollTop)+50+"px");}*/
 /* 修正IE6振动bug */
 * html,* html body {background-image:url(about:blank);background-attachment:fixed;}
 #toper .section-inner{width:960px;margin:0 auto;position:relative;padding:10px 0 0 0}
 #logo{float:left;}
+/*#logo a { display: block;width: 203px;height: 28px;background: url(../../images/ezhaoLogo.jpg) no-repeat 0 0;text-indent: -9999px;}*/
 
 .quick-menu{float:right;padding:30px 10px 0 0 ;}
 .quick-menu>li{float:left;background:url(../../images/icon-all.png) no-repeat 3px -113px}

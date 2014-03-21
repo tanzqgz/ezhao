@@ -4,9 +4,9 @@ body{background:#fff}
 #toper{background:none}
 #header{background:url(../../images/bg-main-head.png) center top;}
 
-#container{width:100%;min-width:1000px;height:501px;border:none;position:relative;padding-bottom:0}
+#container{width:100%;min-width:1000px;height:601px;border:none;position:relative;padding-bottom:0}
 
-.index-kv-b-list{position:absolute;top:0;left:0;width:100%;height:498px;background:#000}
+.index-kv-b-list{position:absolute;top:0;left:0;width:100%;height:601px;background:#000}
 .index-kv-b-list li{position:absolute;top:0;left:0;width:100%;height:601px;display:none}
 .index-kv-b-list li div{position:relative;width:1000px;margin:0 auto}
 .index-kv-b-list li a{position:absolute;display:block;width:120px;height:35px;top:240px;left:12%;}

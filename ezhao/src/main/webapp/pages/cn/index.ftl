@@ -10,6 +10,7 @@
 <link href="${rc.contextPath}/static/styles/lamps/layout.css" rel="stylesheet" type="text/css">
 <link href="${rc.contextPath}/static/styles/lamps/index.css" rel="stylesheet" type="text/css">
 <link href="${rc.contextPath}/static/styles/lamps/jquery.jscrollpane.css" rel="stylesheet" type="text/css">
+<script src="${rc.contextPath}/static/javascripts/jquery.min.js" type="text/javascript" async="" ></script>
 <script src="${rc.contextPath}/static/javascripts/lamps/ga.js" type="text/javascript" async="" ></script>
 <script src="${rc.contextPath}/static/javascripts/lamps/jquery.min.js" type="text/javascript"></script>
 <script src="${rc.contextPath}/static/javascripts/lamps/plugin.js" type="text/javascript"></script>
@@ -18,17 +19,28 @@
 
 <body id="index" data-controller="index" data-action="init">
 	<div id="wraper">
-		<div id="toper" class="png_bg">
-			<div class="section-inner">
-				<div id="logo">
-					<a href="" class="png_bg" title="亿照logo"><img src="${rc.contextPath}/static/images/ezhaoLogo.jpg" style="width:442px;height:55px;"/></a>
-				</div>
-				<ul class="quick-menu">
-					<a href="" title="中文">中文</a> <span>|<span> 
-					<a href="" title="English">English</a>		
-				</ul>
-			</div>
+	<!--[if IE 6]>
+<script src="/js/DD_belatedPNG.js"></script>
+<script>
+  /* EXAMPLE */
+  DD_belatedPNG.fix('.png_bg');
+  
+  /* string argument can be any CSS selector */
+  /* .png_bg example is unnecessary */
+  /* change it to what suits you! */
+</script>
+<![endif]-->
+<div id="toper" class="png_bg">
+	<div class="section-inner">
+		<div id="logo">
+			<a href="" class="png_bg" title="亿照logo"><img src="${rc.contextPath}/static/images/ezhaoLogo.jpg" style="width:442px;height:55px;display:block;text-indent: -9999px;"/></a>
 		</div>
+		<ul class="quick-menu">
+			<a href="" title="中文">中文</a> <span>|<span> 
+			<a href="" title="English">English</a>	
+		</ul>
+	</div>
+</div>
 
 <div id="container">
 	<div id="header">
@@ -43,148 +55,67 @@
 			</ul>
 		</div>
 	</div>
+
 	<ul class="index-kv-b-list">
-		<img title="上海欢乐谷" src="${rc.contextPath}/static/images/taizhou.jpg" style="width:49%;height:90%;margin-top:46px;margin-left:3px;"/>
-		<img title="泰州景区" src="${rc.contextPath}/static/images/taizhoujingqu.jpg" style="width:50%;height:90%;margin-top:46px;float:left;"/>
-	</ul>
-</div>
-
-
-
-
-<div id="mainContent" class="lightingHomeContainer" style="display: block; left: 50%;">
-	<div id="ctl00_cphMainContent_ctl00_PAM_cmnprint" width="100%" align="right">
-		</div>
-			<div>
-				<div style="float:left; width:33%" class="sectionModules">
-					<div style="padding:20px 8px;">
-						<div class="sectionModuleTitle" style="padding: 0px 3px; height: 32px;">
-							<h3>LED 泳池灯系列</h3>  
-						</div>
-						<div class="country_campaignImage" style="">
-							<img src="${rc.contextPath}/static/images/yizao.jpg" alt="LED 泳池灯系列" width="296" height="296" style="margin:2px 0 0 4px">
-						</div>
-                        <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">光，有你未见的一面</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; "></div>
-						</div>
-                        <div style="display:none;">
-						</div>
-						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
-						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
-						</div>
-					</div>
-				</div>
-				<div style="float:left; width:33%" class="sectionModules">
-					<div style="padding:20px 8px;">
-						<div class="sectionModuleTitle" style="padding: 0px 3px; height: 32px;">
-							<h3>LED 水下灯系列</h3>  
-						</div>
-						<div class="country_campaignImage" style="">
-							<img src="${rc.contextPath}/static/images/yizao1.jpg" alt="LED 水下灯系列" width="296" height="296" style="margin:2px 0 0 4px">
-						</div>
-                        <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">LED 水下灯系列</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">突破传统，创新求变</div>
-						</div>
-                        <div style="display:none;">
-						</div>
-						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
-						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
-						</div>
-					</div>
-				</div>
-				<div style="float:left; width:33%" class="sectionModules">
-					<div style="padding:20px 8px;">
-						<div class="sectionModuleTitle" style="padding: 0px 3px; height: 32px;">
-							<h3>LED 柔灯条系列</h3>  
-						</div>
-						<div class="country_campaignImage" style="">
-							<img src="${rc.contextPath}/static/images/youdeng.jpg" alt="LED 柔灯条系列" width="296" height="296" style="margin:2px 0 0 4px">
-						</div>
-                        <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">LED 柔灯条系列</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; "></div>
-						</div>
-                        <div style="display:none;">
-						</div>
-						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
-						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
-						</div>
-					</div>
-				</div>
-				<div style="float:left; width:33%" class="sectionModules">
-					<div style="padding:20px 8px;">
-						<div class="sectionModuleTitle" style="padding: 0px 3px; height: 32px;">
-							<h3>LED 吸顶灯系列</h3>  
-						</div>
-						<div class="country_campaignImage" style="">
-							<img src="${rc.contextPath}/static/images/xiding.jpg" alt="LED 吸顶灯系列" width="296" height="296" style="margin:2px 0 0 4px">
-						</div>
-                        <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">LED 吸顶灯系列</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">LED 吸顶灯系列</div>
-						</div>
-                        <div style="display:none;">
-						</div>
-						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
-						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
-						</div>
-					</div>
-				</div>
-				<div style="float:left; width:33%" class="sectionModules">
-					<div style="padding:20px 8px;">
-						<div class="sectionModuleTitle" style="padding: 0px 3px; height: 32px;">
-							<h3>LED 筒灯系列</h3>  
-						</div>
-						<div class="country_campaignImage" style="">
-							<img src="${rc.contextPath}/static/images/tongdeng.jpg" alt="LED 筒灯系列" width="296" height="296" style="margin:2px 0 0 4px">
-						</div>
-                        <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">LED 筒灯系列</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">LED 筒灯系列</div>
-						</div>
-                        <div style="display:none;">
-						</div>
-						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
-						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
-						</div>
-					</div>
-				</div>
-				<div style="float:left; width:33%" class="sectionModules">
-					<div style="padding:20px 8px;">
-						<div class="sectionModuleTitle" style="padding: 0px 3px; height: 32px;">
-							<h3>LED 路灯系列</h3>  
-						</div>
-						<div class="country_campaignImage" style="">
-							<img src="${rc.contextPath}/static/images/ludeng.jpg" alt="LED 路灯系列" width="296" height="296" style="margin:2px 0 0 4px">
-						</div>
-                        <div style="padding: 0px 3px; height: 33px;" class="sectionModuleContent">
-							<div class="lib2" style="height:13px; color:#888b9c; ">LED 路灯系列</div>
-							<div class="lib3" style="color:#888b9c; overflow:hidden; ">LED 路灯系列</div>
-						</div>
-                        <div style="display:none;">
-						</div>
-						<div style="padding:2px 0 0 5px; " class="sectionModuleLink">
-						    <a href="#" class="liLink" style="vertical-align:middle;">浏览更多信息</a>
-						    <img src="${rc.contextPath}/static/images/linkArrow.png" style="vertical-align:middle; margin-left:4px" class="liLinkImage">
-						</div>
-					</div>
-				</div>
-				<div style="clear:both"></div>
-				</div>            
-    <div style="margin-left: -1px; display: block;
-        padding: 0px 0px 0px 0px; margin-left: -2px; background: url(${rc.contextPath}/static/images/bg_banner.gif) repeat-x;" id="SeoModuleContainer">
-        <div align="center">
-            <img src="${rc.contextPath}/static/images/Horizontal-drop-shadow-divider.png" style="padding-top: 0px;" alt="" width="100%" height="15">
-        </div>
-    <div style="clear: both">
-    </div>
+  		<li class="current" style="display: none; background-image: url(${rc.contextPath}/static/images/img-index-kv-b-3.jpg); opacity: 1; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明体验">
+           	<div><a class="kv_btn " style="left:0px;top:36px;width:1000px;height:403px;" href="#" target="_blank"></a></div>
+        </li>
+    	<li style="background-image: url(${rc.contextPath}/static/images/img-index-kv-b-1.jpg); display: none; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明体验">
+            <div><a class="kv_btn " style="left:18px;top:27px;width:937px;height:366px;" href="#" target="_blank"></a></div>
+        </li>
+        <li style="background-image: url(${rc.contextPath}/static/images/img-index-kv-b-2.jpg); display: list-item; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明体验">
+            <div><a class="kv_btn btnBg" style="left:131px;top:239px;width:93px;height:27px;" href="#" target="_blank"></a></div>
+        </li>
+        <li style="background-image: url(${rc.contextPath}/static/images/img-index-kv-b-8_jpg.jpg); display: none; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明新品">
+            <div><a class="kv_btn " style="left:0px;top:59px;width:1000px;height:320px;" href="#" target="_blank"></a></div>
+        </li>
+    </ul>
+    <div id="mainer">
+            <div class="main-inner clearfix">
+                <div id="content">
+                	<div class="content-inner">
+                    	<div class="index-kv-s png_bg">
+                        	<div class="section-inner">
+                            	<div class="index-kv-s-wrap">
+	                            	<ul class="index-kv-s-list clearfix" style="width: 3280px;">
+	                                    <li>
+	                                    	<a href="#" target="_blank" title="">
+	                                    		<img src="${rc.contextPath}/static/images/img-index-kv-s-6.jpg">
+	                                    		<strong class="png_bg"><span>查看详情</span></strong>
+	                                    	</a>
+	                                    </li>
+	                                    <li>
+	                                    	<a href="#" target="_blank" title="">
+	                                    		<img src="${rc.contextPath}/static/images/img-index-kv-s-4.jpg">
+	                                    		<strong class="png_bg"><span>查看详情</span></strong>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#" target="_blank" title="废旧节能灯回收行动">
+	                                            <img src="${rc.contextPath}/static/images/img-index-kv-s-1.jpg">
+	                                            <strong class="png_bg"><span>查看详情</span></strong>
+	                                        </a>
+	                                    </li>
+	                                    <li>
+	                                        <a href="#" target="_self" title="儿童灯系列">
+	                                             <img src="${rc.contextPath}/static/images/img-index-kv-s-3.jpg">
+	                                             <strong class="png_bg"><span>查看详情</span></strong>
+	                                        </a>
+	                                    </li>
+	                                </ul>
+                                </div>
+                                <div class="index-kv-pager">
+	                             	<ul id="kv_points" class="clearfix">
+	                                </ul>
+                             	</div>
+                            	<a href="#" class="png_bg ctrl prev"></a>
+                            	<a href="#" class="png_bg ctrl next"></a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+    	</div>
     </div>
     <div id="footer">
 		<div class="section-inner">
@@ -197,7 +128,14 @@
 		</div>
 	</div>
 </div>
-</div>
-
+    <script type="text/javascript">
+    $(".index-kv-b-list li").each(function(index, ele){
+		if(index==0){
+			$("#kv_points").append('<li class="current"><a href="#" class="png_bg"></a></li>');
+		}else{
+			$("#kv_points").append('<li><a href="#" class="png_bg"></a></li>');
+		}
+    });
+    </script>
 </body>
 </html>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE mapper  
+PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+"http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+
+<mapper namespace="com.ezhao.lamps.dao.AdvertiseDao">
+	<resultMap id="advertise" type="com.ezhao.lamps.entity.Advertise">
+		<result property="id" column="ID"/>
+		<result property="advertiseURL" column="ADVERTISEURL"/>
+		<result property="advertiseLink" column="ADVERTISELINK"/>
+		<result property="typeId" column="TYPEID"/>
+		<result property="description" column="DESCRIPTION"/>
+		<result property="advertiseURLEN" column="ADVERTISEURLEN"/>
+		<result property="advertiseLinkEN" column="ADVERTISELINKEN"/>
+		<result property="descriptionEN" column="DESCRIPTIONEN"/>
+	</resultMap>
+	
+	<select id="findAll" resultType="advertise">
+		SELECT * FROM ez_advertise
+	</select>
+	
+	<delete id="delete">
+		delete from ez_advertise where id = #{id}
+	</delete>
+	
+	<insert id="save">
+		INSERT INTO ez_advertise(
+		ADVERTISEURL,ADVERTISELINK,TYPEID,DESCRIPTION,
+		ADVERTISEURLEN,ADVERTISELINKEN,DESCRIPTIONEN) VALUES(
+		#{advertiseURL},#{advertiseLink},#{typeId},#{description},
+		#{advertiseURLEN},#{advertiseLinkEN},#{descriptionEN})
+	</insert>
+</mapper>  

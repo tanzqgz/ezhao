@@ -12,11 +12,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import com.ezhao.lamps.entity.Advertise;
+import com.ezhao.lamps.entity.AdvertiseType;
 import com.ezhao.lamps.entity.Category;
 import com.ezhao.lamps.entity.Certificate;
 import com.ezhao.lamps.entity.CompanyInfo;
 import com.ezhao.lamps.entity.SuccessfulCaseCategory;
 import com.ezhao.lamps.entity.SuccessfulCaseDetail;
+import com.ezhao.lamps.service.AdvertiseTypeService;
+import com.ezhao.lamps.service.AdvertiseService;
 import com.ezhao.lamps.service.CategoryService;
 import com.ezhao.lamps.service.CertificateService;
 import com.ezhao.lamps.service.CompanyInfoService;
@@ -38,6 +42,11 @@ public class AdminController {
 	private SuccessfulCaseDetailService successfulCaseDetailService;
 	@Resource
 	private CategoryService categoryService;
+	@Resource
+	private AdvertiseTypeService advertiseTypeService;
+	@Resource
+	private AdvertiseService advertiseService;
+	
 	/**
 	 * 后台管理主页面
 	 * @param map
@@ -284,6 +293,66 @@ public class AdminController {
 	@RequestMapping(value = "/product/category/delete")
 	public String deleteProductCategory(ModelMap map, Category obj) throws Exception{
 		categoryService.delete(obj);
+		map.addAttribute("message","删除成功");
+		map.addAttribute("callbackType", "closeCurrent");
+		map.addAttribute("retReloadTab", "sec_successfulcase_page");
+		return "/message/operationMessage";
+	}
+	
+	/**
+	 * 导航广告管理页面
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/advertise/manager")
+	public String navAdvertiseManager(ModelMap map) throws Exception{
+		List<AdvertiseType> adTypeAll = advertiseTypeService.findAll();
+		map.put("adTypeAll", adTypeAll);
+		List<Advertise> adAll = advertiseService.findAll();
+		map.put("all", adAll);
+		return "/admin/advertiseManager";
+	}
+	
+	/**
+	 * 保存广告
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/advertise/save")
+	public String saveAdvertise(ModelMap map,FileForm form, Advertise obj) throws Exception{
+		try{
+			MultipartFile file = form.getFile();
+			String relativePath = null;
+			if(file != null && !file.isEmpty()){//保存图片
+				relativePath = UploadUtils.saveFile(file.getInputStream(),file.getOriginalFilename());
+				obj.setAdvertiseURL(relativePath);
+			}
+			MultipartFile file1 = form.getFile1();
+			if(file != null && !file.isEmpty()){//保存图片
+				relativePath = UploadUtils.saveFile(file1.getInputStream(),file1.getOriginalFilename());
+				obj.setAdvertiseURLEN(relativePath);
+				advertiseService.save(obj);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+		map.addAttribute("message","保存成功，请重新刷新页面");
+		map.addAttribute("callbackType", "closeCurrent");
+		map.addAttribute("retReloadTab", "sec_successfulcasedetailsave_page");
+		return "/message/operationMessage";
+	}
+	
+	/**
+	 * 删除广告
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/advertise/delete")
+	public String deleteAdvertise(ModelMap map, Advertise obj) throws Exception{
+		advertiseService.delete(obj);
 		map.addAttribute("message","删除成功");
 		map.addAttribute("callbackType", "closeCurrent");
 		map.addAttribute("retReloadTab", "sec_successfulcase_page");

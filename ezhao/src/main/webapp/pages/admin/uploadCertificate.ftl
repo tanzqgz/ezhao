@@ -4,7 +4,7 @@
 	<input type="hidden" name="pageSize" value="" />
 </form>
 <div class="pageHeader">
-<form enctype="multipart/form-data" onsubmit="return iframeCallback(this,navTabAjaxDone);" action="${rc.contextPath}/admin/certificate/upload" method="post">
+<form enctype="multipart/form-data" onsubmit="return iframeCallback(this);" action="${rc.contextPath}/admin/certificate/upload" method="post">
 	<div class="searchBar">
 		<table class="pageFormContent">
 			<tr>

@@ -1,5 +1,5 @@
 <div class="pageContent">                                                                                 
-	<form method="post" action="${rc.contextPath}/admin/detail/successful/case/save" enctype="multipart/form-data" onsubmit="return iframeCallback(this,navTabAjaxDone);">
+	<form method="post" action="${rc.contextPath}/admin/detail/successful/case/save" enctype="multipart/form-data" onsubmit="return iframeCallback(this);">
 		<div class="pageFormContent" layoutH="456">
 			<table style="border-spacing:10px;">
 				<tr>

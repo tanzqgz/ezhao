@@ -4,7 +4,7 @@
 	<input type="hidden" name="pageSize" value="" />
 </form>
 <div class="pageHeader">
-<form onsubmit="return iframeCallback(this,navTabAjaxDone);"  action="${rc.contextPath}/admin/product/category/save" method="post" class="pageForm required-validate">
+<form onsubmit="return iframeCallback(this);"  action="${rc.contextPath}/admin/product/category/save" method="post" class="pageForm required-validate">
 	<div class="searchBar">
 		<table class="pageFormContent">
 			<tr>

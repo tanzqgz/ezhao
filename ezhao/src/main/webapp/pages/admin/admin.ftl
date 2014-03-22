@@ -76,21 +76,11 @@ $(function(){
 						</ul>
 					</div>		
 					<div class="accordionHeader">
-					<h2><span>Folder</span>新闻发布</h2>
+						<h2><span>Folder</span>用户管理</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="${rc.contextPath}/admin/security/userList" target="navTab" rel="sec_user_page">发布新闻</a></li>
-						</ul>
-					</div>
-					<div class="accordionHeader">
-						<h2><span>Folder</span>权限管理</h2>
-					</div>
-					<div class="accordionContent">
-						<ul class="tree">
-							<li><a href="${rc.contextPath}/admin/security/userList" target="navTab" rel="sec_user_page">用户</a></li>
-							<li><a href="${rc.contextPath}/admin/security/roleList" target="navTab" rel="sec_role_page">角色</a></li>
-							<li><a href="${rc.contextPath}/admin/security/permissionList" target="navTab" rel="sec_permission_page">权限</a></li>
+							<li><a href="${rc.contextPath}/admin/user/password/manager" target="navTab" rel="sec_user_page">管理员密码修改</a></li>
 						</ul>
 					</div>
 				

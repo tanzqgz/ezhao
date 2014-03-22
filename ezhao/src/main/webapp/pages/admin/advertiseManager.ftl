@@ -4,7 +4,7 @@
 	<input type="hidden" name="pageSize" value="" />
 </form>
 <div class="pageHeader">
-<form enctype="multipart/form-data" onsubmit="return iframeCallback(this,navTabAjaxDone);" action="${rc.contextPath}/admin/advertise/save" method="post">
+<form enctype="multipart/form-data" onsubmit="return iframeCallback(this);" action="${rc.contextPath}/admin/advertise/save" method="post">
 	<div class="searchBar">
 		<table class="pageFormContent">
 			<tr>
@@ -70,6 +70,7 @@
 		<thead>
 			<tr>
 				<th width="2%"></th>
+				<th width="10%">广告图片位置</th>
 				<th width="10%">图片链接</th>
 				<th width="15%">图片链接（英文）</th>
 				<th width="10%">描述</th>
@@ -80,6 +81,7 @@
 			<#list all as obj>
 			<tr target="advertise_list">
 				<td><input type="checkbox" name="id" value="${(obj.id)!}"></td>
+				<td><#if obj.typeId == '1'>首页中间<#elseif obj.typeId=='2'>首页下部<#elseif obj.typeId=='3'>产品中心上部<#else>微信二维码</#if></td>
 				<td>${(obj.advertiseLink)!}</td>
 				<td>${(obj.advertiseLinkEN)!}</td>
 				<td>${(obj.description)!}</td>

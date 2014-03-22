@@ -8,6 +8,7 @@
 <link href="${rc.contextPath}/static/styles/lamps/layout.css" rel="stylesheet" type="text/css">
 <link href="${rc.contextPath}/static/styles/lamps/jquery.jscrollpane.css" rel="stylesheet" type="text/css">
 <link href="${rc.contextPath}/static/styles/lamps/product.css" rel="stylesheet" type="text/css">
+<script src="${rc.contextPath}/static/javascripts/jquery.min.js" type="text/javascript" async="" ></script>
 <script src="${rc.contextPath}/static/javascripts/lamps/ga.js" type="text/javascript" async="" ></script>
 <script src="${rc.contextPath}/static/javascripts/lamps/jquery.min.js" type="text/javascript"></script>
 <script src="${rc.contextPath}/static/javascripts/lamps/plugin.js" type="text/javascript"></script>
@@ -27,7 +28,7 @@
   /* change it to what suits you! */
 </script>
 <![endif]-->
-<div id="toper" class="png_bg">
+<div id="toper" style="height:81px;" class="png_bg">
 	<div class="section-inner">
 		<div id="logo">
 			<a href="" class="png_bg" title="亿照logo"><img src="${rc.contextPath}/static/images/ezhaoLogo.jpg" style="width:442px;height:55px;"/></a>
@@ -59,37 +60,6 @@
             	<div id="nav-crumbs">
                 	<ul class="nav-crumbs-list clearfix">
 						<li class="index"><a href="#" class="icon-all">首页</a></li>
-						<li class="has-list"><a href="#" class="icon-all">产品中心</a>
-							<ul class="sub-nav-crumbs">
-								<li><a href="#">LED 日光灯管系列</a></li>
-								<li><a href="#">LED 室内照明系列</a></li>
-								<li><a href="#">LED 泳池水景系列</a></li>
-								<li><a href="#">LED 道路照明系列</a></li>
-								<li><a href="#">LED 户外照明系列</a></li>
-							</ul>
-						</li>
-						<li class="has-list"><a href="#" class="icon-all">家居灯具</a>
-							<ul class="sub-nav-crumbs">
-								<li><a href="#">客厅</a></li>
-								<li><a href="#">餐厅</a></li>
-								<li><a href="#">卧室</a></li>
-								<li><a href="#">儿童房</a></li>
-								<li><a href="#">书房</a></li>
-								<li><a href="#">厨卫</a></li>
-								<li><a href="#">阳台</a></li>
-								<li><a href="#">风格化系列</a></li>
-							</ul>
-						</li>
-						<li class="has-list"><a href="#" class="icon-all">客厅</a>
-							<ul class="sub-nav-crumbs">
-								<li><a href="#">吸顶灯</a></li>
-								<li><a href="#">落地灯</a></li>
-								<li><a href="#">台灯</a></li>
-								<li><a href="#">壁灯</a></li>
-								<li><a href="">筒灯</a></li>
-								<li><a href="#">天花灯</a></li>
-							</ul>
-						</li><li class="current"><span>吸顶灯</span></li>  
 					</ul>
 				</div>
                	<div id="content">
@@ -176,46 +146,6 @@
                                             </div>
                                         </li>
                                     </ul>
-                                    <div class="action">
-                                    	<div class="block-inner">
-                                    	<span class="product-list-pager" style="display: inline;">
-                                    		<a href="javascript:;" class="page hover" title="1"><span>1</span></a>
-                            				<a href="#" title="2" class="page"><span>2</span></a>
-                            				<a href="#" title="3" class="page"><span>3</span></a>
-                            				<a href="#" title="4" class="page"><span>4</span></a>
-                            				<a href="#" title="5" class="page"><span>5</span></a>
-                            				<a href="#" title="6" class="page"><span>6</span></a>
-                            				<a href="#" title="10" class="page">...10</a>
-                            				<a href="#" title="2" class="pro-btn next"><span>下一页&gt;</span></a>
-                                    	</span>
-                                    	<div class="page-list-wrap2" style="display:none">
-                                	 		<a href="javascript:;" class="page hover" title="1"><span>1</span></a>
-											<a href="#" title="2" class="page"><span>2</span></a>
-											<a href="#" title="3" class="page"><span>3</span></a>
-											<a href="#" title="4" class="page"><span>4</span></a>
-											<a href="#" title="5" class="page"><span>5</span></a>
-											<a href="#" title="6" class="page"><span>6</span></a>
-											<a href="#" title="7" class="page"><span>7</span></a>
-											<a href="#" title="8" class="page"><span>8</span></a>
-											<a href="#" title="9" class="page"><span>9</span></a>
-											<a href="#" title="10" class="page"><span>10</span></a>
-										</div>
-										<div class="page-list-wrap" style="display:none">
-											<a href="javascript:;" class="page hover" title="1"><span>1</span></a>
-											<a href="#" title="2" class="page"><span>2</span></a>
-											<a href="#" title="3" class="page"><span>3</span></a>
-											<a href="#" title="4" class="page"><span>4</span></a>
-											<a href="#" title="5" class="page"><span>5</span></a>
-											<a href="#" title="6" class="page"><span>6</span></a>
-											<a href="#" title="10" class="page">...10</a>
-											<a href="#" title="2" class="pro-btn next"><span>下一页&gt;</span></a>
-										</div>
-                                            
-                                            <span class="count">共计<span>10</span>页</span>
-                                            <span class="jump">到第 <input type="text" id="page-num"> 页</span>
-                                            <a href="#" class="pro-btn jump-btn"><span>跳转 &gt; </span></a>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="under-section">
                                 	<a class="icon-all goto-top" href="#"></a>

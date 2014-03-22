@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
 <head>
+<meta http-equiv="X-UA-Compatible" content="IE=100"> <!-- IE8 mode -->
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="keywords" content="广州亿照 亿照光电 照明灯 照明设备 户外灯 室内灯 LED灯 LED亿照 亿照LED 绿色照明 节能灯 环保灯 LED照明 LED天花灯 蜡烛灯 遥控灯 球泡灯 射灯 灯管 LED吸顶灯 LED泳池灯 工矿灯 可调光筒灯 灯控制版 豆胆灯 隧道灯 投光灯 洗墙灯 硬灯条 柔性光条 水底灯 草坪灯 庭院灯 遥控球泡灯 广州亿照光电科技有限公司">
+<meta name="keywords" content="${(company.keywords)!}">
 <meta name="description" content="<@spring.message "ezhao.name"/>">
 <title><@spring.message "ezhao.name"/></title>
 <link href="${rc.contextPath}/static/styles/lamps/global.css" rel="stylesheet" type="text/css">
@@ -41,7 +42,6 @@
 		</ul>
 	</div>
 </div>
-
 <div id="container">
 	<div id="header">
 		<div id="nav">
@@ -57,18 +57,11 @@
 	</div>
 
 	<ul class="index-kv-b-list">
-  		<li class="current" style="display: none; background-image: url(${rc.contextPath}/static/images/img-index-kv-b-3.jpg); opacity: 1; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明体验">
-           	<div><a class="kv_btn " style="left:0px;top:36px;width:1000px;height:403px;" href="#" target="_blank"></a></div>
+		<#list middleAdvertise as obj>
+  		<li <#if obj_index==0>class="current"</#if>style="display: list-item;background-image: url(${rc.contextPath}/${(obj.advertiseURL)!}); opacity: 1; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="${(obj.description)!}">
+           	<div><a class="kv_btn " style="left:0px;top:36px;width:1000px;height:403px;" href="${(obj.advertiseLink)!}" target="_blank"></a></div>
         </li>
-    	<li style="background-image: url(${rc.contextPath}/static/images/img-index-kv-b-1.jpg); display: none; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明体验">
-            <div><a class="kv_btn " style="left:18px;top:27px;width:937px;height:366px;" href="#" target="_blank"></a></div>
-        </li>
-        <li style="background-image: url(${rc.contextPath}/static/images/img-index-kv-b-2.jpg); display: list-item; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明体验">
-            <div><a class="kv_btn btnBg" style="left:131px;top:239px;width:93px;height:27px;" href="#" target="_blank"></a></div>
-        </li>
-        <li style="background-image: url(${rc.contextPath}/static/images/img-index-kv-b-8_jpg.jpg); display: none; background-position: 50% 0%; background-repeat: no-repeat no-repeat;" title="商业照明新品">
-            <div><a class="kv_btn " style="left:0px;top:59px;width:1000px;height:320px;" href="#" target="_blank"></a></div>
-        </li>
+        </#list>
     </ul>
     <div id="mainer">
             <div class="main-inner clearfix">
@@ -78,30 +71,12 @@
                         	<div class="section-inner">
                             	<div class="index-kv-s-wrap">
 	                            	<ul class="index-kv-s-list clearfix" style="width: 3280px;">
-	                                    <li>
-	                                    	<a href="#" target="_blank" title="">
-	                                    		<img src="${rc.contextPath}/static/images/img-index-kv-s-6.jpg">
-	                                    		<strong class="png_bg"><span>查看详情</span></strong>
-	                                    	</a>
-	                                    </li>
-	                                    <li>
-	                                    	<a href="#" target="_blank" title="">
-	                                    		<img src="${rc.contextPath}/static/images/img-index-kv-s-4.jpg">
-	                                    		<strong class="png_bg"><span>查看详情</span></strong>
-	                                        </a>
-	                                    </li>
-	                                    <li>
-	                                        <a href="#" target="_blank" title="废旧节能灯回收行动">
-	                                            <img src="${rc.contextPath}/static/images/img-index-kv-s-1.jpg">
-	                                            <strong class="png_bg"><span>查看详情</span></strong>
-	                                        </a>
-	                                    </li>
-	                                    <li>
-	                                        <a href="#" target="_self" title="儿童灯系列">
-	                                             <img src="${rc.contextPath}/static/images/img-index-kv-s-3.jpg">
-	                                             <strong class="png_bg"><span>查看详情</span></strong>
-	                                        </a>
-	                                    </li>
+	                            	<#list bottomAdvertise as obj>
+	                                    <li><a href="${(obj.advertiseLink)!}" target="_blank" title="">
+	                                    	<img src="${rc.contextPath}/${(obj.advertiseURL)!}">
+	                                    	<strong class="png_bg"><span>查看详情</span></strong>
+	                                    </a></li>
+	                                </#list>
 	                                </ul>
                                 </div>
                                 <div class="index-kv-pager">
@@ -119,23 +94,83 @@
     </div>
     <div id="footer">
 		<div class="section-inner">
-			<p class="copyright" style="clear:both;text-align:center;color:#888"><@spring.message "ezhao.main.footer"/></p>
-			<p style="clear:both;text-align:center;color:#888">联系电话：020－89000046   传真：020－34352057   邮箱：eozooo@126.com</p>
+			<p class="copyright" style="clear:both;text-align:center;color:#888">${(company.companyName)!}&nbsp;&nbsp;联系地址：${(company.address)!}&nbsp;&nbsp;备案号 粤ICP0925554号</p>
+			<p style="clear:both;text-align:center;color:#888">联系电话：${(company.telephone)!}   传真：${(company.faxphone)!}   邮箱：${(company.email)!}</p>
 			<p>本站关键词：</p>
-			<p>
-				广州亿照 亿照光电 照明灯 照明设备 户外灯 室内灯 LED灯 LED亿照 亿照LED 绿色照明 节能灯 环保灯 LED照明 LED天花灯 蜡烛灯 遥控灯 球泡灯 射灯 灯管 LED吸顶灯 LED泳池灯 工矿灯 可调光筒灯 灯控制版 豆胆灯 隧道灯 投光灯 洗墙灯 硬灯条 柔性光条 水底灯 草坪灯 庭院灯 遥控球泡灯 广州亿照光电科技有限公司
-			</p>
+			<p>${(company.keywords)!}</p>
 		</div>
 	</div>
 </div>
-    <script type="text/javascript">
-    $(".index-kv-b-list li").each(function(index, ele){
-		if(index==0){
-			$("#kv_points").append('<li class="current"><a href="#" class="png_bg"></a></li>');
-		}else{
-			$("#kv_points").append('<li><a href="#" class="png_bg"></a></li>');
-		}
-    });
-    </script>
+<div class="side-btns-2wm" style="">
+	<em style="font-color:red;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;亿照微信号</em>
+	<img src="${rc.contextPath}/${(weixin.advertiseURL)!}" width="90"/>
+</div>
+
+<div id="love2" style="right:2px;POSITION:absolute;TOP:1px;z-index: 999999;">
+	<table border="0" width="107" cellspacing="0" cellpadding="0">
+		<tbody>
+			<tr>
+				<td style="width:110px;vertical-align: inherit;" colspan="2">
+				<img border="0" style="margin-bottom:-6px;" src="${rc.contextPath}/static/images/ezhao/kefu_up.jpg"></td>
+			</tr>
+			<tr>
+				<td style="vertical-align: middle;display: table-cell;background:url(${rc.contextPath}/static/images/ezhao/kefu_middle.jpg)">
+					<table border="0" width="100" align="center" cellspacing="2px" cellpadding="0">
+						<tbody>
+							<tr><td width="40" height="25" align="center"><img src="${rc.contextPath}/static/images/ezhao/QQonline.jpg" border="0" align="middle"></td><td width="60" height="25" style="word-break:break-all"><a class="h12_qq" target="blank" href="http://wpa.qq.com/msgrd?V=1&Uin=1556315596&Site=www.chinaeozo.com&Menu=no" title="在线即时交谈">亿照客服1</a></td></tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td style="background:url(${rc.contextPath}/static/images/ezhao/kefu_middle.jpg)">
+					<table border="0" width="100" align="center" cellspacing="0" cellpadding="0">
+						<tbody>
+							<tr>
+								<td width="40" height="25" align="center">
+									<img src="${rc.contextPath}/static/images/ezhao/QQonline.jpg" border="0" align="middle">
+								</td>
+								<td width="60" height="25" style="word-break:break-all">
+									<a class="h12_qq" target="blank" href="http://wpa.qq.com/msgrd?V=1&amp;Uin=1941867264&amp;Site=www.chinaeozo.com&amp;Menu=no" title="在线即时交谈">亿照客服2</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td valign="middle" background="${rc.contextPath}/static/images/ezhao/kefu_middle.jpg" colspan="2">
+					<p align="center"><font color="#FF0000"></font></p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="middle" background="${rc.contextPath}/static/images/ezhao/kefu_middle.jpg">
+					<div align="center"><font color="#FF0000"></font></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="middle" background="${rc.contextPath}/static/images/ezhao/kefu_middle.jpg">
+					<div align="center"></div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" valign="middle" background="${rc.contextPath}/static/images/ezhao/kefu_middle.jpg">
+					<img border="0" src="${rc.contextPath}/static/images/ezhao/kefu_down.jpg">
+				</td>
+			</tr>
+			<tr>
+			</tr>
+		</tbody>
+	</table>
+</div>
+<script type="text/javascript">
+$(".index-kv-b-list li").each(function(index, ele){
+	if(index==0){
+		$("#kv_points").append('<li class="current"><a href="#" class="png_bg"></a></li>');
+	}else{
+		$("#kv_points").append('<li><a href="#" class="png_bg"></a></li>');
+	}
+});
+</script>
 </body>
 </html>

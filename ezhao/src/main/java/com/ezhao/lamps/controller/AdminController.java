@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.ezhao.lamps.entity.Advertise;
@@ -19,6 +18,7 @@ import com.ezhao.lamps.entity.Certificate;
 import com.ezhao.lamps.entity.CompanyInfo;
 import com.ezhao.lamps.entity.SuccessfulCaseCategory;
 import com.ezhao.lamps.entity.SuccessfulCaseDetail;
+import com.ezhao.lamps.entity.User;
 import com.ezhao.lamps.service.AdvertiseTypeService;
 import com.ezhao.lamps.service.AdvertiseService;
 import com.ezhao.lamps.service.CategoryService;
@@ -26,6 +26,7 @@ import com.ezhao.lamps.service.CertificateService;
 import com.ezhao.lamps.service.CompanyInfoService;
 import com.ezhao.lamps.service.SuccessfulCaseCategoryService;
 import com.ezhao.lamps.service.SuccessfulCaseDetailService;
+import com.ezhao.lamps.service.UserService;
 import com.ezhao.lamps.utils.UploadUtils;
 import com.ezhao.lamps.vo.FileForm;
 
@@ -46,6 +47,8 @@ public class AdminController {
 	private AdvertiseTypeService advertiseTypeService;
 	@Resource
 	private AdvertiseService advertiseService;
+	@Resource
+	private UserService userService;
 	
 	/**
 	 * 后台管理主页面
@@ -110,7 +113,6 @@ public class AdminController {
 	 * @return
 	 * @throws Exception
 	 */
-	@ResponseBody
 	@RequestMapping(value = "/certificate/upload", method = RequestMethod.POST)
 	public String certificateImageUpload(ModelMap map, FileForm form) throws Exception{
 		MultipartFile file = form.getFile();
@@ -357,5 +359,44 @@ public class AdminController {
 		map.addAttribute("callbackType", "closeCurrent");
 		map.addAttribute("retReloadTab", "sec_successfulcase_page");
 		return "/message/operationMessage";
+	}
+	
+	/**
+	 * 导航管理员密码修改页面
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/user/password/manager")
+	public String navAdminPWDManager(ModelMap map) throws Exception{
+		return "/admin/userpwdmodify";
+	}
+	
+	/**
+	 * 保存新密码
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/user/password/save")
+	public String saveNewPWD(ModelMap map,User user) throws Exception{
+		try{
+			User admin = userService.getUserByLoginName("admin");
+			if(admin != null){
+				if(admin.getPassword().equals(user.getOldPassword())){
+					admin.setNewPassword(user.getNewPassword());
+					userService.update(admin);
+					map.addAttribute("message","修改成功");
+				}
+			}else{
+				map.addAttribute("message","修改失败");
+				map.addAttribute("statusCode","500");
+			}
+			map.addAttribute("callbackType", "closeCurrent");
+			map.addAttribute("retReloadTab", "sec_user_page");
+			return "/message/operationMessage";
+		}catch(Exception e){
+			throw e;
+		}
 	}
 }

@@ -8,4 +8,6 @@ public interface UserService {
 	public User getUserByLoginName(String name);
 	
 	public List<User> findUserByLoginNameAndPwd(String loginName, String password);
+	
+	public void update(User user);
 }

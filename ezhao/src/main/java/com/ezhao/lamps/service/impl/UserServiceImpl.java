@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService{
 	
 	public User getUserByLoginName(String name) {
 		List<User> user = userDao.findByLoginName(name);
-		return user.size() > 1 ? user.get(0) : null;
+		return user.size() > 0 ? user.get(0) : null;
 	}
 
 	@Override
@@ -26,5 +26,10 @@ public class UserServiceImpl implements UserService{
 		user.setLoginName(loginName);
 		user.setPassword(password);
 		return userDao.findByLoginnameAndPassword(user);
+	}
+	
+	@Override
+	public void update(User user) {
+		userDao.update(user);
 	}
 }

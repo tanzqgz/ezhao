@@ -10,4 +10,6 @@ public interface AdvertiseService {
 	public void save(Advertise obj);
 	
 	public void delete(Advertise obj);
+	
+	public List<Advertise> findByTypeId(Advertise obj);
 }

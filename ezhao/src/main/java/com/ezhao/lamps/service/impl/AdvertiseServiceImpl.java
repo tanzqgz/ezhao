@@ -30,4 +30,9 @@ public class AdvertiseServiceImpl implements AdvertiseService{
 		advertiseDao.delete(obj);
 	}
 
+	@Override
+	public List<Advertise> findByTypeId(Advertise obj) {
+		return advertiseDao.findByTypeId(obj);
+	}
+
 }

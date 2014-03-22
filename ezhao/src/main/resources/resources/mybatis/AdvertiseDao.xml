@@ -19,6 +19,10 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 		SELECT * FROM ez_advertise
 	</select>
 	
+	<select id="findByTypeId" resultType="advertise">
+		SELECT * FROM ez_advertise where TYPEID = #{typeId}
+	</select>
+	
 	<delete id="delete">
 		delete from ez_advertise where id = #{id}
 	</delete>

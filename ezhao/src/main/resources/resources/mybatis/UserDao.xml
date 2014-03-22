@@ -17,4 +17,10 @@ PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
 	<select id="findByLoginnameAndPassword" parameterType="User" resultMap="User">
 		SELECT * FROM user t WHERE t.loginName = #{loginName} and t.password = #{password}
 	</select>
+	
+	<update id="update" parameterType="User">
+		UPDATE user SET 
+		PASSWORD = #{newPassword}
+		WHERE ID = #{id}
+	</update>
 </mapper>  

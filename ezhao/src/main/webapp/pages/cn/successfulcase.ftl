@@ -90,8 +90,6 @@
 	        								<p class="clearfix" style="position:relative"><input name="keyWord" type="text" class="txt-search" value=""><input type="submit" class="btn-search icon-all" title="搜索" value="" style="cursor:pointer">
 												<span class="hint">请输入搜索关键字</span>
 											</p>
-	        								<div class="radioBut"><label><input name="type" type="radio" value="news" checked="checked" onclick="onClickRadio(this);">新闻</label> &nbsp;&nbsp;&nbsp; 
-	        								<label><input name="type" type="radio" value="products" onclick="onClickRadio(this);">产品</label></div>
 	        								</form>
 	    								</div>
 									</div>

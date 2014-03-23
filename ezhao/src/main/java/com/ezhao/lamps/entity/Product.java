@@ -5,67 +5,63 @@ import java.util.Date;
 public class Product {
 
 	private int id;
-	private String productName;
-	private String description;
-	private int product_category;
+	private String productNameCN;
+	private String productNameEN;
+	private String descriptionCN;
+	private String descriptionEN;
+	private int productCategory;
 	private String thumbnails;
-	private Date create_date;
-	private int version;
-
-	public int getVersion() {
-		return version;
-	}
-
-	public void setVersion(int version) {
-		this.version = version;
-	}
-
+	private Date createDate;
+	
 	public int getId() {
 		return id;
 	}
-
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	public String getProductName() {
-		return productName;
+	public String getProductNameCN() {
+		return productNameCN;
 	}
-
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setProductNameCN(String productNameCN) {
+		this.productNameCN = productNameCN;
 	}
-
-	public String getDescription() {
-		return description;
+	public String getProductNameEN() {
+		return productNameEN;
 	}
-
-	public void setDescription(String description) {
-		this.description = description;
+	public void setProductNameEN(String productNameEN) {
+		this.productNameEN = productNameEN;
 	}
-
-	public int getProduct_category() {
-		return product_category;
+	public String getDescriptionCN() {
+		return descriptionCN;
 	}
-
-	public void setProduct_category(int product_category) {
-		this.product_category = product_category;
+	public void setDescriptionCN(String descriptionCN) {
+		this.descriptionCN = descriptionCN;
 	}
-
+	public String getDescriptionEN() {
+		return descriptionEN;
+	}
+	public void setDescriptionEN(String descriptionEN) {
+		this.descriptionEN = descriptionEN;
+	}
+	public int getProductCategory() {
+		return productCategory;
+	}
+	public void setProductCategory(int productCategory) {
+		this.productCategory = productCategory;
+	}
 	public String getThumbnails() {
 		return thumbnails;
 	}
-
 	public void setThumbnails(String thumbnails) {
 		this.thumbnails = thumbnails;
 	}
-
-	public Date getCreate_date() {
-		return create_date;
+	public Date getCreateDate() {
+		return createDate;
 	}
-
-	public void setCreate_date(Date create_date) {
-		this.create_date = create_date;
+	public void setCreateDate(Date createDate) {
+		this.createDate = createDate;
 	}
+	
 
+	
 }

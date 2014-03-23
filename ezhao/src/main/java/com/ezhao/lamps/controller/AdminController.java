@@ -11,19 +11,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.ezhao.lamps.entity.Advertise;
-import com.ezhao.lamps.entity.AdvertiseType;
 import com.ezhao.lamps.entity.Category;
 import com.ezhao.lamps.entity.Certificate;
 import com.ezhao.lamps.entity.CompanyInfo;
 import com.ezhao.lamps.entity.SuccessfulCaseCategory;
 import com.ezhao.lamps.entity.SuccessfulCaseDetail;
 import com.ezhao.lamps.entity.User;
-import com.ezhao.lamps.service.AdvertiseTypeService;
-import com.ezhao.lamps.service.AdvertiseService;
 import com.ezhao.lamps.service.CategoryService;
 import com.ezhao.lamps.service.CertificateService;
 import com.ezhao.lamps.service.CompanyInfoService;
+import com.ezhao.lamps.service.ProductService;
 import com.ezhao.lamps.service.SuccessfulCaseCategoryService;
 import com.ezhao.lamps.service.SuccessfulCaseDetailService;
 import com.ezhao.lamps.service.UserService;
@@ -49,6 +46,8 @@ public class AdminController {
 	private AdvertiseService advertiseService;
 	@Resource
 	private UserService userService;
+	@Resource
+	private ProductService productService;
 	
 	/**
 	 * 后台管理主页面
@@ -398,5 +397,91 @@ public class AdminController {
 		}catch(Exception e){
 			throw e;
 		}
+	}
+	/**
+	 * 保存product
+	 * 
+	 * @param map
+	 * @param form
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/product/save")
+	public String ProductCreate(ModelMap map, FileForm form) throws Exception {
+		MultipartFile file = form.getFile();
+		String relativePath = null;
+		if (file != null && !file.isEmpty()) {// 保存图片
+			relativePath = UploadUtils.saveFile(file.getInputStream(),
+					file.getOriginalFilename());
+			System.out.println("=========================================start product===============================================:"+form.getDescriptionCN());
+			Product product = new Product();
+			product.setThumbnails(relativePath);
+			product.setDescriptionCN(form.getDescriptionCN());
+			product.setDescriptionEN(form.getDescriptionEN());
+			product.setProductNameCN(form.getNameCN());
+			product.setProductNameEN(form.getNameEN());
+			product.setCreateDate(new Date());
+			product.setProductCategory(form.getCategoryId());
+			productService.saveProduct(product);
+			System.out.println("=========================================start product===============================================");
+		}
+		map.addAttribute("message", "保存成功，请重新刷新页面");
+		map.addAttribute("callbackType", "closeCurrent");
+		map.addAttribute("retReloadTab", "sec_product_page");
+		return "/message/operationMessage";
+	}
+
+	/**
+	 * product list
+	 * 
+	 * @param map
+	 * @param form
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/product/list")
+	public String ProductList(ModelMap map) throws Exception {
+		Product product = new Product();
+		List<Product> products = productService.findProducts(product);
+		List<Category> categorys=categoryService.findAll();
+		map.addAttribute("products", products);
+		map.addAttribute("categorys", categorys);
+
+		return "/admin/productList";
+	}
+
+	/**
+	 * 删除product
+	 * 
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/product/delete/{id}")
+	public String productDelete(ModelMap map,@PathVariable int id) throws Exception {
+		Product obj=new Product();
+		obj.setId(id);
+		productService.deleteProduct(obj);
+		map.addAttribute("message", "删除成功");
+		map.addAttribute("callbackType", "closeCurrent");
+		map.addAttribute("retReloadTab", "sec_product_page");
+		return "/message/operationMessage";
+	}
+
+	/**
+	 * 跳转到product
+	 * 
+	 * @param map
+	 * @return
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/product/add")
+	public String productAdd(ModelMap map) throws Exception {
+		/**
+		 * 获取分类列表返回
+		 */
+		List<Category> categorys = categoryService.findAll();
+		map.addAttribute("categorys", categorys);
+		return "/admin/productAdd";
 	}
 }

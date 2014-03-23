@@ -8,6 +8,4 @@ public interface UserDao {
 	public List<User> findByLoginName(String loginName);
 	
 	public List<User> findByLoginnameAndPassword(User u);
-	
-	public void update(User u);
 }

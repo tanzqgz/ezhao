@@ -94,3 +94,26 @@ CREATE TABLE `ez_product_category` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+
+--广告类型表
+CREATE TABLE `ez_ad_type` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `adCategoryName` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='广告类型';
+
+--广告表
+CREATE TABLE `ez_advertise` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `advertiseURL` varchar(200) NOT NULL,
+  `advertiseLink` varchar(500) NOT NULL,
+  `typeId` int(11) NOT NULL,
+  `description` varchar(500) DEFAULT NULL,
+  `advertiseURLEN` varchar(200) DEFAULT NULL,
+  `advertiseLinkEN` varchar(500) DEFAULT NULL,
+  `descriptionEN` varchar(1000) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `id_UNIQUE` (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8 COMMENT='广告位置图片';
+

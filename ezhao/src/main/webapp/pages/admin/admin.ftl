@@ -67,12 +67,12 @@ $(function(){
 						</ul>
 					</div>	
 					<div class="accordionHeader"><!--栏目管理-->
-					<h2><span>Folder</span>产品管理</h2>
+						<h2><span>Folder</span>产品管理</h2>
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
 							<li><a href="${rc.contextPath}/admin/product/category" target="navTab" rel="product_category_page">产品分类</a></li>
-							<li><a href="${rc.contextPath}/admin/catagory/idea/manage?pageSize=10" target="navTab" rel="idea_catagory_page">添加产品</a></li>
+							<li><a href="${rc.contextPath}/admin/product/list" target="navTab" rel="sec_product_page">产品列表</a></li>
 						</ul>
 					</div>		
 					<div class="accordionHeader">
@@ -80,10 +80,10 @@ $(function(){
 					</div>
 					<div class="accordionContent">
 						<ul class="tree">
-							<li><a href="${rc.contextPath}/admin/user/password/manager" target="navTab" rel="sec_user_page">管理员密码修改</a></li>
+							<li><a href="${rc.contextPath}/admin/user/password/manager" target="navTab" rel="sec_user_page">管理员密码修改</a></li>						
 						</ul>
 					</div>
-				
+									
 					<div class="accordionHeader">
 						<h2><span>Folder</span>公司介绍</h2>
 					</div>
@@ -117,7 +117,7 @@ $(function(){
 								<a href="javascript:;">
 									<span><span class="home_icon">主页</span></span>
 								</a>
-							</li>
+							</lijkm
 						</ul>
 					</div>
 					<div class="tabsLeft">left</div><!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->

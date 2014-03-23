@@ -13,7 +13,7 @@
 		<script src="${rc.contextPath}/static/javascripts/dwz/jquery.cookie.js" type="text/javascript"></script>
 		<script src="${rc.contextPath}/static/javascripts/dwz/jquery.validate.min.js" type="text/javascript"></script>
 		<script src="${rc.contextPath}/static/javascripts/dwz/jquery.bgiframe.js" type="text/javascript"></script>
-		
+		  
 		<script src="${rc.contextPath}/static/javascripts/dwz/dwz.min.js"></script>		
 		<script src="${rc.contextPath}/static/javascripts/dwz/dwz.regional.zh.js"></script>
 		<script src="${rc.contextPath}/static/javascripts/dwz/dwz.custom.js"></script>
@@ -117,7 +117,7 @@ $(function(){
 								<a href="javascript:;">
 									<span><span class="home_icon">主页</span></span>
 								</a>
-							</lijkm
+							</li>
 						</ul>
 					</div>
 					<div class="tabsLeft">left</div><!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->

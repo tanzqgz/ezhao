@@ -23,11 +23,37 @@ public class ProductServiceImpl implements ProductService {
 		List<Product> products = new ArrayList<Product>();
 		int offset = (pageNo - 1) * pageSize;
 		Page page = new Page(offset, pageSize);
-		if (0 == version) {
-			products = productDao.findProductsForCN(page);
-		} else {
-			products = productDao.findProductsForEN(page);
-		}
+		products = productDao.findProductsByPage(page);
+
+		return products;
+	}
+
+	@Override
+	public void saveProduct(Product product) {
+		productDao.saveProduct(product);
+
+	}
+
+	@Override
+	public void updateProduct(Product product) {
+		productDao.updateProduct(product);
+	}
+
+	@Override
+	public void deleteProduct(Product product) {
+		productDao.deleteProduct(product);
+
+	}
+
+	@Override
+	public Product findProduct(Product product) {
+		Product retobj = productDao.findProduct(product);
+		return retobj;
+	}
+
+	@Override
+	public List<Product> findProducts(Product product) {
+		List<Product> products = productDao.findAllProducts(product);
 		return products;
 	}
 

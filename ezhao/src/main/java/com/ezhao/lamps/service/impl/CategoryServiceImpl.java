@@ -17,17 +17,6 @@ public class CategoryServiceImpl implements CategoryService {
 	private CategoryDao categoryDao;
 
 	@Override
-	public List<Category> findCategorys(int version) {
-		List<Category> categorys = new ArrayList<Category>();
-		if (0 == version) {
-			categorys = categoryDao.findCategorysForCN();
-		} else {
-			categorys = categoryDao.findCategorysForEN();
-		}
-		return categorys;
-	}
-
-	@Override
 	public List<Category> findAll() {
 		return categoryDao.findAll();
 	}
